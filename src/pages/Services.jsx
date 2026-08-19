@@ -103,7 +103,7 @@ export default function Services() {
             {/* Service cards — each occupies 1 column, flowing naturally */}
             {services.map((s, i) => (
               <article className="card services-grid__card" key={s.name}>
-                <span className="services-grid__num">{String(i + 1).padStart(2, '0')}</span>
+                {/* <span className="services-grid__num">{String(i + 1).padStart(2, '0')}</span> */}
                 <h3>{s.name}</h3>
                 <p>{s.desc}</p>
               </article>
