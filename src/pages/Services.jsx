@@ -67,7 +67,7 @@ export default function Services() {
             <PopupButton
               url="https://calendly.com/allfinancialbanking"
               rootElement={document.getElementById("root")}
-              text="Talk to a Banking Technology Expert \u2192"
+              text="Talk to a Banking Technology Expert"
               className="btn btn-primary"
             />
           </div>

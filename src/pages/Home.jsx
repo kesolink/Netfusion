@@ -87,9 +87,9 @@ export default function Home() {
               BANKING TECHNOLOGY, BUILT FOR AFRICA
             </span>
             <h1 className="home-hero__title">
-              Powering the<br />
-              future of<br />
-              banking<br />
+              Powering the <br />
+              future of <br />
+              banking <br />
               <span className="home-hero__highlight">across Africa.</span>
             </h1>
             <p className="home-hero__lead">

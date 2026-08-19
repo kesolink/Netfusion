@@ -19,15 +19,15 @@ export default function CtaBand({
             <PopupButton
               url="https://calendly.com/allfinancialbanking"
               rootElement={document.getElementById("root")}
-              text={`${primaryLabel} \u2192`}
+              text={primaryLabel}
               className="btn btn-primary"
             />
-            <PopupButton
+            {/* <PopupButton
               url="https://calendly.com/allfinancialbanking"
               rootElement={document.getElementById("root")}
               text="Talk to an Expert"
               className="btn btn-outline"
-            />
+            /> */}
           </div>
         </div>
         <div className="cta-band__art svg-wrap">

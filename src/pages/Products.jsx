@@ -102,7 +102,7 @@ export default function Products() {
             <PopupButton
               url="https://calendly.com/allfinancialbanking"
               rootElement={document.getElementById("root")}
-              text="Request Demo \u2192"
+              text="Request Demo"
               className="btn btn-primary"
             />
             <Link to="/services" className="btn btn-outline">See Implementation Process</Link>

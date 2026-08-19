@@ -24,6 +24,17 @@
     margin-top: 28px;
     @include tablet { justify-content: center; flex-wrap: wrap; }
     .btn-outline { border-color: rgba(255,255,255,0.35); color: $white; &:hover { border-color: $white; background: rgba(255,255,255,0.08);} }
+    .btn-primary {
+      &::after {
+        content: '→';
+        font-size: 1.1rem;
+        transition: transform 0.2s ease;
+        display: inline-block;
+      }
+      &:hover::after {
+        transform: translateX(4px);
+      }
+    }
   }
   &__art {
     @include tablet { display: none; }

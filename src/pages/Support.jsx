@@ -172,22 +172,6 @@ export default function Support() {
               <button type="submit" className="btn btn-primary" disabled={disable}>
                 {disable ? 'Sending...' : 'Send Message \u2192'}
               </button>
-              <button type="button" className="btn btn-secondary" onClick={() => {
-                emailjs.send(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, {
-                  from_name: 'Test User',
-                  from_email: 'test@example.com',
-                  message: 'This is a test email from Netfusion site',
-                  institution: 'Test Institution',
-                  topic: 'Product demo',
-                }, import.meta.env.VITE_EMAILJS_PUBLIC_KEY)
-                  .then(() => {
-                    toast.success('Test email sent successfully!');
-                  })
-                  .catch((err) => {
-                    console.error('Test email error:', err);
-                    toast.error('Test email failed');
-                  });
-              }} disabled={disable}>Test EmailJS</button>
             </form>
           </div>
         </div>
