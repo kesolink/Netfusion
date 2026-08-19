@@ -1,0 +1,55 @@
+// ===== NETFUSION design tokens =====
+// Source: NETFUSION Website Design & Development Specification (BRD)
+
+// Brand colours
+$navy: #082c5c;
+$navy-light: #123a73;
+$navy-dark: #051a3d;
+$teal: #2e9b9c;
+$teal-light: #4dbdbd;
+$teal-pale: #e7f5f4;
+$white: #ffffff;
+$grey-bg: #f5f7fa;
+$grey-bg-alt: #eef2f7;
+$border: #e5eaf1;
+$text-dark: #111827;
+$text-muted: #6b7280;
+$text-faint: #9aa6b5;
+
+// Gradients
+$gradient-navy: linear-gradient(135deg, $navy-light 0%, $navy 100%);
+$gradient-accent: linear-gradient(90deg, $teal 0%, $navy 100%);
+
+// Type
+$font-heading: 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+$font-body: 'Inter', 'Segoe UI', Arial, sans-serif;
+
+// Fluid type scale (BRD: H1 60-72 / H2 44 / H3 34 / paragraph 20 / button 18)
+$fs-h1: clamp(2.4rem, 4.6vw, 4.5rem);
+$fs-h2: clamp(1.9rem, 3vw, 2.75rem);
+$fs-h3: clamp(1.4rem, 2vw, 2.125rem);
+$fs-lead: clamp(1.05rem, 1.4vw, 1.25rem);
+$fs-body: 1rem;
+$fs-small: 0.875rem;
+$fs-eyebrow: 0.8rem;
+$fs-button: 1.0625rem;
+
+// Radius & shadow
+$radius-sm: 10px;
+$radius-md: 16px;
+$radius-lg: 24px;
+$radius-pill: 999px;
+
+$shadow-sm: 0 4px 16px rgba(8, 44, 92, 0.08);
+$shadow-md: 0 12px 32px rgba(8, 44, 92, 0.12);
+$shadow-lg: 0 24px 60px rgba(8, 44, 92, 0.16);
+
+// Layout
+// $container-width: 1220px;
+$container-width: 1420px;
+$container-pad: 24px;
+
+// Breakpoints
+$bp-sm: 560px;
+$bp-md: 860px;
+$bp-lg: 1320px;

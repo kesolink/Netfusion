@@ -1,0 +1,379 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.services-hero {
+  padding-top: clamp(48px, 8vw, 88px);
+  background: radial-gradient(560px 320px at 85% 0%, rgba(46, 155, 156, 0.08), transparent), $white;
+
+  &__inner {
+    max-width: 700px;
+
+    h1 {
+      margin: 16px 0 18px;
+    }
+
+    .lead {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+// ---- SERVICES GRID LAYOUT ----
+// .services-grid {
+//   &__layout {
+//     display: grid;
+//     grid-template-columns: repeat(3, 1fr);
+//     gap: 20px;
+//     align-items: start;
+
+//     // Promo card spans the first 2 columns
+//     .services-promo {
+//       grid-column: 1 / 3;
+//     }
+
+//     @include tablet {
+//       grid-template-columns: repeat(2, 1fr);
+
+//       .services-promo {
+//         grid-column: 1 / -1; // full width on tablet
+//       }
+//     }
+
+//     @include mobile {
+//       grid-template-columns: 1fr;
+
+//       .services-promo {
+//         grid-column: 1 / -1;
+//       }
+//     }
+//   }
+
+//   &__card {
+//     h3 {
+//       font-size: 1.02rem;
+//       margin-bottom: 8px;
+//       margin-top: 12px;
+//     }
+//     p { font-size: 0.9rem; }
+//   }
+
+//   &__num {
+//     font-family: $font-heading;
+//     font-size: 0.75rem;
+//     font-weight: 700;
+//     color: $teal;
+//     letter-spacing: 0.5px;
+//   }
+// }
+
+.services-grid {
+  &__layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    // align-items: start;  ← remove this, let it default to stretch
+
+    // Promo card spans the first 2 columns
+    .services-promo {
+      grid-column: 1 / 3;
+    }
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+
+      .services-promo {
+        grid-column: 1 / -1; // full width on tablet
+      }
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+
+      .services-promo {
+        grid-column: 1 / -1;
+      }
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      font-size: 1.02rem;
+      margin-bottom: 8px;
+      margin-top: auto; // pushes title+desc toward the bottom when the card is stretched tall
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+  }
+
+  &__num {
+    font-family: $font-heading;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: $teal;
+    letter-spacing: 0.5px;
+  }
+}
+
+// ---- SERVICES PROMO CARD ----
+// .services-promo {
+//   position: relative;
+//   border-radius: $radius-lg;
+//   overflow: hidden;
+//   min-height: 380px;
+//   display: flex;
+//   align-items: flex-end;
+
+//   @include tablet {
+//     min-height: 320px;
+//   }
+
+//   &__img {
+//     position: absolute;
+//     inset: 0;
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+//     object-position: center 20%;
+//   }
+
+//   &__overlay {
+//     position: absolute;
+//     inset: 0;
+//     background: linear-gradient(160deg,
+//         rgba(8, 44, 92, 0.92) 0%,
+//         rgba(8, 44, 92, 0.78) 55%,
+//         rgba(8, 44, 92, 0.45) 100%);
+//   }
+
+//   &__content {
+//     position: relative;
+//     z-index: 2;
+//     padding: 40px 36px;
+
+//     @include mobile {
+//       padding: 28px 24px;
+//     }
+//   }
+
+//   &__eyebrow {
+//     display: inline-flex;
+//     align-items: center;
+//     gap: 10px;
+//     font-family: $font-heading;
+//     font-size: 0.7rem;
+//     font-weight: 700;
+//     letter-spacing: 2px;
+//     color: $teal;
+//     text-transform: uppercase;
+//     margin-bottom: 20px;
+
+//     &::before {
+//       content: '';
+//       display: inline-block;
+//       width: 18px;
+//       height: 2px;
+//       background: $teal;
+//     }
+//   }
+
+//   &__title {
+//     font-family: $font-heading;
+//     font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+//     font-weight: 800;
+//     line-height: 1.15;
+//     color: $white;
+//     letter-spacing: -0.02em;
+//     margin-bottom: 16px;
+//   }
+
+//   &__accent {
+//     color: $teal;
+//   }
+
+//   &__lead {
+//     font-family: $font-body;
+//     font-size: 0.95rem;
+//     line-height: 1.6;
+//     color: rgba(255, 255, 255, 0.72);
+//     max-width: 340px;
+//     margin: 0;
+//   }
+// }
+// ---- SERVICES PROMO CARD ----
+.services-promo {
+  position: relative;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  min-height: 380px;
+  display: flex;
+  align-items: flex-end;
+
+  @include tablet {
+    min-height: 320px;
+  }
+
+  &__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(160deg,
+        rgba(8, 44, 92, 0.92) 0%,
+        rgba(8, 44, 92, 0.78) 55%,
+        rgba(8, 44, 92, 0.45) 100%);
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    padding: 40px 36px;
+
+    @include mobile {
+      padding: 28px 24px;
+    }
+  }
+
+  &__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: $font-heading;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: $teal;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 18px;
+      height: 2px;
+      background: $teal;
+    }
+  }
+
+  &__title {
+    font-family: $font-heading;
+    font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+    font-weight: 800;
+    line-height: 1.15;
+    color: $white;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+  }
+
+  &__accent {
+    color: $teal;
+  }
+
+  &__lead {
+    font-family: $font-body;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.72);
+    max-width: 340px;
+    margin: 0;
+  }
+}
+
+.process__art {
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.tco {
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__copy h2 {
+    margin: 14px 0 16px;
+  }
+}
+
+.faq {
+  &__inner {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 48px;
+    align-items: center;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__list h2 {
+    margin: 14px 0 28px;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__item {
+    background: $white;
+    border: 1px solid $border;
+    border-radius: $radius-md;
+    padding: 6px 22px;
+
+    &.is-open {
+      border-color: $teal;
+    }
+  }
+
+  &__q {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    padding: 18px 0;
+    font-weight: 700;
+    font-size: 0.98rem;
+    color: $navy;
+    text-align: left;
+  }
+
+  &__toggle {
+    color: $teal;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    margin-left: 12px;
+  }
+
+  &__a {
+    padding-bottom: 18px;
+    font-size: 0.9rem;
+  }
+
+  &__art {
+    @include tablet {
+      display: none;
+    }
+  }
+}

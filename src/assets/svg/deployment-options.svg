@@ -1,0 +1,58 @@
+<svg viewBox="0 0 560 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Four deployment options: cloud, private cloud, on-premise, and hybrid">
+<defs>
+  <linearGradient id="nf6-a" x1="0" y1="0" x2="0.3" y2="1">
+    <stop offset="0%" stop-color="#123a73"></stop><stop offset="100%" stop-color="#082C5C"></stop>
+  </linearGradient>
+  <filter id="nf6-sh" x="-60%" y="-60%" width="220%" height="220%">
+    <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#082C5C" flood-opacity="0.15"></feDropShadow>
+  </filter>
+</defs>
+<g font-family="Inter, 'Segoe UI', sans-serif">
+<text x="30" y="34" font-size="15" font-weight="700" fill="#111827">Deploy your way</text>
+<text x="30" y="52" font-size="10.5" fill="#6B7280">Choose the model that best suits your institution</text>
+
+<!-- Cloud -->
+<g filter="url(#nf6-sh)"><rect x="30" y="80" width="115" height="130" rx="16" fill="#FFFFFF"></rect></g>
+<g transform="translate(60 105)">
+  <path d="M10 30 a12 12 0 0 1 0 -24 a16 16 0 0 1 31 4 a11 11 0 0 1 -3 21 Z" fill="#2E9B9C" fill-opacity="0.18" stroke="#2E9B9C" stroke-width="1.6"></path>
+  <circle cx="24" cy="16" r="2.2" fill="#2E9B9C">
+    <animate attributeName="cy" values="16;10;16" dur="2.4s" repeatCount="indefinite"></animate>
+  </circle>
+</g>
+<text x="87" y="168" text-anchor="middle" font-size="11.5" font-weight="700" fill="#111827">Cloud</text>
+<text x="87" y="183" text-anchor="middle" font-size="8" fill="#6B7280">Fully managed, elastic</text>
+
+<!-- Private Cloud -->
+<g filter="url(#nf6-sh)"><rect x="160" y="80" width="115" height="130" rx="16" fill="#FFFFFF"></rect></g>
+<g transform="translate(190 105)">
+  <path d="M10 30 a12 12 0 0 1 0 -24 a16 16 0 0 1 31 4 a11 11 0 0 1 -3 21 Z" fill="#082C5C" fill-opacity="0.12" stroke="#082C5C" stroke-width="1.6"></path>
+  <rect x="14" y="10" width="10" height="10" rx="2" fill="none" stroke="#082C5C" stroke-width="1.4"></rect>
+  <path d="M16 10 v-2.4 a3 3 0 0 1 6 0 V10" fill="none" stroke="#082C5C" stroke-width="1.3"></path>
+</g>
+<text x="217" y="168" text-anchor="middle" font-size="11.5" font-weight="700" fill="#111827">Private Cloud</text>
+<text x="217" y="183" text-anchor="middle" font-size="8" fill="#6B7280">Dedicated, isolated</text>
+
+<!-- On-Premise -->
+<g filter="url(#nf6-sh)"><rect x="290" y="80" width="115" height="130" rx="16" fill="#FFFFFF"></rect></g>
+<g transform="translate(320 100)">
+  <rect x="0" y="8" width="30" height="26" rx="2" fill="none" stroke="#2E9B9C" stroke-width="1.6"></rect>
+  <line x1="6" y1="15" x2="24" y2="15" stroke="#2E9B9C" stroke-width="1.4"></line>
+  <line x1="6" y1="21" x2="24" y2="21" stroke="#2E9B9C" stroke-width="1.4"></line>
+  <line x1="6" y1="27" x2="18" y2="27" stroke="#2E9B9C" stroke-width="1.4"></line>
+  <circle cx="27" cy="27" r="1.6" fill="#2E9B9C">
+    <animate attributeName="opacity" values="1;0.2;1" dur="1.6s" repeatCount="indefinite"></animate>
+  </circle>
+</g>
+<text x="347" y="168" text-anchor="middle" font-size="11.5" font-weight="700" fill="#111827">On-Premise</text>
+<text x="347" y="183" text-anchor="middle" font-size="8" fill="#6B7280">Full local control</text>
+
+<!-- Hybrid -->
+<g filter="url(#nf6-sh)"><rect x="420" y="80" width="115" height="130" rx="16" fill="url(#nf6-a)"></rect></g>
+<g transform="translate(450 100)">
+  <path d="M6 26 a9 9 0 0 1 0 -18 a12 12 0 0 1 23 3 a8 8 0 0 1 -2 15 Z" fill="none" stroke="#FFFFFF" stroke-width="1.5"></path>
+  <rect x="9" y="8" width="8" height="8" rx="1.5" fill="none" stroke="#FFFFFF" stroke-width="1.3"></rect>
+</g>
+<text x="477" y="168" text-anchor="middle" font-size="11.5" font-weight="700" fill="#FFFFFF">Hybrid</text>
+<text x="477" y="183" text-anchor="middle" font-size="8" fill="#B9CBE0">Best of both worlds</text>
+</g>
+</svg>

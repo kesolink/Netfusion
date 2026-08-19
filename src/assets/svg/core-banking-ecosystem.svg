@@ -1,0 +1,102 @@
+<svg viewBox="0 0 600 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ALL-FINANCIAL Core Banking Suite hub connected to six modules: loan management, digital banking, CRM, AML compliance, API integration, and reporting analytics">
+<defs>
+  <radialGradient id="nf2-core" cx="35%" cy="30%" r="75%">
+    <stop offset="0%" stop-color="#123a73"></stop>
+    <stop offset="100%" stop-color="#082C5C"></stop>
+  </radialGradient>
+  <filter id="nf2-shadow" x="-60%" y="-60%" width="220%" height="220%">
+    <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#082C5C" flood-opacity="0.18"></feDropShadow>
+  </filter>
+  <filter id="nf2-shadow-sm" x="-60%" y="-60%" width="220%" height="220%">
+    <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#082C5C" flood-opacity="0.12"></feDropShadow>
+  </filter>
+</defs>
+
+<g id="nf2-nodes" font-family="Inter, 'Segoe UI', sans-serif">
+  <!-- connector lines -->
+  <g stroke="#C7D2E0" stroke-width="1.5" fill="none">
+    <line x1="300" y1="230" x2="300" y2="86"></line>
+    <line x1="300" y1="230" x2="470" y2="130"></line>
+    <line x1="300" y1="230" x2="500" y2="290"></line>
+    <line x1="300" y1="230" x2="380" y2="390"></line>
+    <line x1="300" y1="230" x2="200" y2="390"></line>
+    <line x1="300" y1="230" x2="100" y2="290"></line>
+    <line x1="300" y1="230" x2="130" y2="130"></line>
+  </g>
+  <circle cx="300" cy="230" r="4" fill="#2E9B9C">
+    <animate attributeName="opacity" values="1;0.35;1" dur="2.4s" repeatCount="indefinite"></animate>
+  </circle>
+
+  <!-- central hub -->
+  <g filter="url(#nf2-shadow)">
+    <circle cx="300" cy="230" r="72" fill="url(#nf2-core)"></circle>
+  </g>
+  <circle cx="300" cy="230" r="82" fill="none" stroke="#2E9B9C" stroke-width="1.5" opacity="0.35"></circle>
+  <text x="300" y="222" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">ALL-FINANCIAL</text>
+  <text x="300" y="240" text-anchor="middle" font-size="10.5" fill="#B9CBE0">Core Banking Suite</text>
+
+  <!-- module: Digital Banking (top) -->
+  <g filter="url(#nf2-shadow-sm)">
+    <rect x="240" y="40" width="120" height="46" rx="14" fill="#FFFFFF"></rect>
+  </g>
+  <circle cx="264" cy="63" r="11" fill="#2E9B9C" fill-opacity="0.15"></circle>
+  <rect x="259" y="58" width="10" height="10" rx="2" fill="none" stroke="#2E9B9C" stroke-width="1.6"></rect>
+  <text x="282" y="60" font-size="10.5" font-weight="700" fill="#111827">Digital Banking</text>
+  <text x="282" y="73" font-size="8" fill="#6B7280">Mobile &amp; Internet</text>
+
+  <!-- module: API Integration (upper right) -->
+  <g filter="url(#nf2-shadow-sm)">
+    <rect x="425" y="90" width="130" height="46" rx="14" fill="#FFFFFF"></rect>
+  </g>
+  <circle cx="449" cy="113" r="11" fill="#2E9B9C" fill-opacity="0.15"></circle>
+  <path d="M444 108 l-4 5 l4 5 M454 108 l4 5 l-4 5" fill="none" stroke="#2E9B9C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+  <text x="467" y="110" font-size="10.5" font-weight="700" fill="#111827">API Integration</text>
+  <text x="467" y="123" font-size="8" fill="#6B7280">Open banking APIs</text>
+
+  <!-- module: Reporting & Analytics (right) -->
+  <g filter="url(#nf2-shadow-sm)">
+    <rect x="460" y="255" width="130" height="46" rx="14" fill="#FFFFFF"></rect>
+  </g>
+  <circle cx="484" cy="278" r="11" fill="#2E9B9C" fill-opacity="0.15"></circle>
+  <path d="M479 283 v-9 M484 283 v-5 M489 283 v-12" stroke="#2E9B9C" stroke-width="1.6" stroke-linecap="round"></path>
+  <text x="502" y="275" font-size="10.5" font-weight="700" fill="#111827">Reporting &amp;</text>
+  <text x="502" y="288" font-size="10.5" font-weight="700" fill="#111827">Analytics</text>
+
+  <!-- module: AML & Compliance (bottom right) -->
+  <g filter="url(#nf2-shadow-sm)">
+    <rect x="345" y="355" width="130" height="46" rx="14" fill="#FFFFFF"></rect>
+  </g>
+  <circle cx="369" cy="378" r="11" fill="#2E9B9C" fill-opacity="0.15"></circle>
+  <path d="M369 371 l6 2.6 v5.4 c0 4 -3 6.4 -6 7.4 c-3 -1 -6 -3.4 -6 -7.4 v-5.4Z" fill="none" stroke="#2E9B9C" stroke-width="1.5" stroke-linejoin="round"></path>
+  <text x="387" y="374" font-size="10.5" font-weight="700" fill="#111827">AML &amp;</text>
+  <text x="387" y="387" font-size="10.5" font-weight="700" fill="#111827">Compliance</text>
+
+  <!-- module: CRM (bottom left) -->
+  <g filter="url(#nf2-shadow-sm)">
+    <rect x="125" y="355" width="120" height="46" rx="14" fill="#FFFFFF"></rect>
+  </g>
+  <circle cx="149" cy="378" r="11" fill="#2E9B9C" fill-opacity="0.15"></circle>
+  <circle cx="149" cy="374" r="3" fill="none" stroke="#2E9B9C" stroke-width="1.6"></circle>
+  <path d="M143 384 c0 -4 3 -6 6 -6 s6 2 6 6" fill="none" stroke="#2E9B9C" stroke-width="1.6" stroke-linecap="round"></path>
+  <text x="167" y="374" font-size="10.5" font-weight="700" fill="#111827">CRM</text>
+  <text x="167" y="387" font-size="8" fill="#6B7280">Customer relations</text>
+
+  <!-- module: Loan Management (left) -->
+  <g filter="url(#nf2-shadow-sm)">
+    <rect x="15" y="255" width="130" height="46" rx="14" fill="#FFFFFF"></rect>
+  </g>
+  <circle cx="39" cy="278" r="11" fill="#2E9B9C" fill-opacity="0.15"></circle>
+  <text x="33" y="282" font-size="12" font-weight="700" fill="#2E9B9C">₦</text>
+  <text x="57" y="275" font-size="10.5" font-weight="700" fill="#111827">Loan</text>
+  <text x="57" y="288" font-size="10.5" font-weight="700" fill="#111827">Management</text>
+
+  <!-- module: Islamic / Investment (upper left) -->
+  <g filter="url(#nf2-shadow-sm)">
+    <rect x="45" y="90" width="130" height="46" rx="14" fill="#FFFFFF"></rect>
+  </g>
+  <circle cx="69" cy="113" r="11" fill="#2E9B9C" fill-opacity="0.15"></circle>
+  <path d="M64 118 a5 5 0 1 1 5 -8.6" fill="none" stroke="#2E9B9C" stroke-width="1.6" stroke-linecap="round"></path>
+  <text x="87" y="110" font-size="10.5" font-weight="700" fill="#111827">Islamic Banking</text>
+  <text x="87" y="123" font-size="8" fill="#6B7280">Shariah-compliant</text>
+</g>
+</svg>

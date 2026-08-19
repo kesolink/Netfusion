@@ -1,0 +1,46 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.team-ring {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 1/1;
+  margin-inline: auto;
+
+  &__ring {
+    position: absolute;
+    border: 1.5px solid $border;
+    border-radius: 50%;
+  }
+  &__ring--outer { inset: 0; }
+  &__ring--inner { inset: 15%; }
+
+  &__center {
+    position: absolute;
+    inset: 15%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: $font-heading;
+    font-weight: 800;
+    font-size: 1.4rem;
+    letter-spacing: -0.02em;
+    color: $navy;
+    background: $white;
+  }
+
+  &__avatar {
+    position: absolute;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid $white;
+    box-shadow: $shadow-sm;
+    transform: translate(-50%, -50%);
+    @include mobile { width: 48px; height: 48px; }
+  }
+}

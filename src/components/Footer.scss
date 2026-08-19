@@ -1,0 +1,78 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.nf-footer {
+  background: $navy-dark;
+  color: rgba(255, 255, 255, 0.7);
+  padding-top: 72px;
+
+  &__top {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1fr 1.2fr;
+    gap: 32px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    @include desktop-sm {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__brand {
+    p { color: rgba(255, 255, 255, 0.55); margin: 16px 0 20px; max-width: 320px; }
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: $font-heading;
+    font-weight: 800;
+    font-size: 1.15rem;
+    color: $white;
+    svg { width: 28px; height: 28px; }
+  }
+  &__social {
+    display: flex;
+    gap: 10px;
+    a {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(255, 255, 255, 0.08);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      transition: background 0.2s ease;
+      &:hover { background: $teal; }
+    }
+  }
+
+  &__col {
+    h4 {
+      color: $white;
+      font-size: 0.95rem;
+      margin-bottom: 18px;
+    }
+    ul { display: flex; flex-direction: column; gap: 11px; }
+    li { font-size: 0.875rem; color: rgba(255, 255, 255, 0.6); line-height: 1.5; }
+    a:hover { color: $teal-light; }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding-block: 24px;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.45);
+    flex-wrap: wrap;
+  }
+  &__legal {
+    display: flex;
+    gap: 20px;
+    a:hover { color: $teal-light; }
+  }
+}

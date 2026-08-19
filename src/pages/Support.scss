@@ -1,0 +1,227 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.support-hero {
+  padding-top: clamp(48px, 8vw, 88px);
+  padding-bottom: 8px;
+  text-align: center;
+  &__inner {
+    max-width: 640px;
+    margin-inline: auto;
+    h1 { margin: 16px 0 16px; }
+  }
+}
+
+.contact-channels {
+  &__inner {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    align-items: center;
+    @include tablet { grid-template-columns: 1fr; }
+  }
+  &__card {
+    h3 { font-size: 1rem; margin-bottom: 6px; }
+  }
+  &__value { color: $navy; font-weight: 700; font-size: 0.95rem; margin-bottom: 4px; }
+  &__note { font-size: 0.82rem; }
+  &__art { @include tablet { display: none; } }
+}
+
+.contact-form {
+  &__inner {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 40px;
+    align-items: stretch;
+    @include tablet { grid-template-columns: 1fr; }
+  }
+  &__photo {
+    position: relative;
+    img {
+      width: 100%; height: 100%;
+      min-height: 320px;
+      object-fit: cover;
+      border-radius: $radius-lg;
+      box-shadow: $shadow-md;
+    }
+  }
+  &__badge {
+    position: absolute;
+    bottom: 20px; left: 20px;
+    background: $white;
+    border-radius: $radius-md;
+    padding: 14px 20px;
+    box-shadow: $shadow-md;
+    strong { display: block; color: $navy; font-size: 1.3rem; }
+    span { font-size: 0.78rem; color: $text-muted; }
+  }
+  &__card { padding: 40px; }
+  &__card h2 { margin-bottom: 10px; }
+  &__card .lead { margin-bottom: 24px; }
+  &__form { display: flex; flex-direction: column; gap: 16px; }
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    @include mobile { grid-template-columns: 1fr; }
+  }
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: $navy;
+  }
+  input, select, textarea {
+    font-family: $font-body;
+    font-size: 0.95rem;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid $border;
+    background: $grey-bg;
+    color: $text-dark;
+    resize: vertical;
+    &:focus { outline: 2px solid $teal; outline-offset: 1px; background: $white; }
+  }
+  button { align-self: flex-start; margin-top: 6px; }
+  &__success {
+    background: $teal-pale;
+    border-radius: $radius-md;
+    padding: 24px;
+    strong { color: $navy; display: block; margin-bottom: 6px; }
+  }
+}
+
+.security {
+  &__inner {
+    display: grid;
+    grid-template-columns: 0.9fr 1fr;
+    gap: 40px;
+    align-items: center;
+    @include tablet { grid-template-columns: 1fr; }
+  }
+  &__copy h2 { margin: 14px 0 18px; }
+  &__list { display: flex; flex-direction: column; gap: 12px; }
+  &__list li {
+    font-size: 0.95rem;
+    color: $text-dark;
+    padding-left: 26px;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 6px;
+      width: 14px; height: 14px;
+      border-radius: 50%;
+      background: $teal-pale;
+      box-shadow: inset 0 0 0 2px $teal;
+    }
+  }
+}
+
+.office {
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: center;
+    @include tablet { grid-template-columns: 1fr; }
+    h2 { margin: 14px 0 12px; }
+  }
+  &__map {
+    height: 220px;
+    border-radius: $radius-lg;
+    background: repeating-linear-gradient(135deg, $grey-bg-alt, $grey-bg-alt 10px, $grey-bg 10px, $grey-bg 20px);
+    display: flex; align-items: center; justify-content: center;
+    color: $text-faint;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+}
+
+.customer-success {
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: center;
+    @include tablet {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+  }
+
+  &__image-wrap {
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+    
+    img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      border-radius: 120px 24px 120px 24px;
+      box-shadow: 0 20px 48px rgba(8, 44, 92, 0.12);
+      object-fit: cover;
+      
+      @include mobile {
+        border-radius: 80px 16px 80px 16px;
+      }
+    }
+  }
+
+  &__content {
+    .eyebrow {
+      color: $teal;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      margin-bottom: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 24px;
+        height: 2px;
+        background: $teal;
+      }
+    }
+
+    h2 {
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      color: $navy;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: $text-muted;
+      font-size: 1.05rem;
+      line-height: 1.65;
+      margin-bottom: 28px;
+      max-width: 520px;
+    }
+  }
+
+  &__highlight {
+    color: $teal;
+  }
+
+  &__link {
+    font-weight: 700;
+    color: $navy;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 1.05rem;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $teal;
+    }
+  }
+}

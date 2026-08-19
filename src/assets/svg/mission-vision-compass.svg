@@ -1,0 +1,48 @@
+<svg viewBox="0 0 460 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mission and vision: a compass guiding a rising growth path">
+<defs>
+  <linearGradient id="nf15-ring" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#2E9B9C"></stop><stop offset="100%" stop-color="#082C5C"></stop>
+  </linearGradient>
+  <filter id="nf15-sh" x="-60%" y="-60%" width="220%" height="220%">
+    <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#082C5C" flood-opacity="0.18"></feDropShadow>
+  </filter>
+</defs>
+<g font-family="Inter, 'Segoe UI', sans-serif">
+
+<!-- growth path -->
+<path d="M60 260 C 140 260, 150 190, 210 190 C 260 190, 260 130, 320 120" fill="none" stroke="#E5EAF1" stroke-width="6" stroke-linecap="round"></path>
+<path d="M60 260 C 140 260, 150 190, 210 190 C 260 190, 260 130, 320 120" fill="none" stroke="url(#nf15-ring)" stroke-width="6" stroke-linecap="round" stroke-dasharray="480" stroke-dashoffset="480">
+  <animate attributeName="stroke-dashoffset" values="480;0" dur="2.4s" fill="freeze"></animate>
+</path>
+<circle cx="60" cy="260" r="6" fill="#082C5C"></circle>
+
+<!-- compass -->
+<g filter="url(#nf15-sh)">
+  <circle cx="320" cy="100" r="58" fill="#FFFFFF"></circle>
+</g>
+<circle cx="320" cy="100" r="58" fill="none" stroke="url(#nf15-ring)" stroke-width="3"></circle>
+<circle cx="320" cy="100" r="42" fill="none" stroke="#E5EAF1" stroke-width="1"></circle>
+<text x="320" y="52" text-anchor="middle" font-size="8" fill="#9AA6B5">N</text>
+<text x="320" y="156" text-anchor="middle" font-size="8" fill="#9AA6B5">S</text>
+<text x="270" y="104" text-anchor="middle" font-size="8" fill="#9AA6B5">W</text>
+<text x="370" y="104" text-anchor="middle" font-size="8" fill="#9AA6B5">E</text>
+
+<g transform="translate(320 100)">
+  <path d="M0 -32 L8 0 L0 32 L-8 0 Z" fill="#082C5C"></path>
+  <path d="M0 -32 L8 0 L0 0 Z" fill="#2E9B9C"></path>
+  <circle r="5" fill="#082C5C"></circle>
+  <animateTransform attributeName="transform" type="rotate" values="0 0 0;10 0 0;-6 0 0;0 0 0" dur="5s" repeatCount="indefinite" additive="sum"></animateTransform>
+</g>
+
+<!-- labels -->
+<g filter="url(#nf15-sh)"><rect x="40" y="30" width="150" height="52" rx="16" fill="#FFFFFF"></rect></g>
+<text x="62" y="52" font-size="11" font-weight="700" fill="#111827">Our Mission</text>
+<text x="62" y="66" font-size="8" fill="#6B7280">Empower institutions with</text>
+<text x="62" y="76" font-size="8" fill="#6B7280">secure banking technology</text>
+
+<g filter="url(#nf15-sh)"><rect x="150" y="250" width="150" height="52" rx="16" fill="#082C5C"></rect></g>
+<text x="172" y="272" font-size="11" font-weight="700" fill="#FFFFFF">Our Vision</text>
+<text x="172" y="286" font-size="8" fill="#B9CBE0">Financial inclusion and growth</text>
+<text x="172" y="296" font-size="8" fill="#B9CBE0">across Africa</text>
+</g>
+</svg>

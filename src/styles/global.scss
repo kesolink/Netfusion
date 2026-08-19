@@ -1,0 +1,294 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'reveal' as *;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: $font-body;
+  color: $text-dark;
+  background: $white;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font-heading;
+  color: $navy;
+  font-weight: 700;
+  line-height: 1.12;
+  margin: 0;
+}
+
+h1 {
+  font-size: $fs-h1;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: $fs-h2;
+  letter-spacing: -0.015em;
+}
+
+h3 {
+  font-size: $fs-h3;
+  letter-spacing: -0.01em;
+}
+
+p {
+  font-size: $fs-body;
+  line-height: 1.7;
+  color: $text-muted;
+  margin: 0;
+}
+
+.lead {
+  font-size: $fs-lead;
+  line-height: 1.6;
+}
+
+// ---- layout utilities ----
+.container {
+  @include container;
+}
+
+.section {
+  @include section-pad;
+}
+
+.section--alt {
+  background: $grey-bg;
+}
+
+.section--navy {
+  background: $gradient-navy;
+  color: $white;
+
+  h2,
+  h3 {
+    color: $white;
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.75);
+  }
+}
+
+.section-head {
+  max-width: 640px;
+  margin-bottom: 48px;
+
+  &.center {
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .eyebrow {
+    @include eyebrow;
+    margin-bottom: 14px;
+  }
+
+  h2 {
+    margin-bottom: 16px;
+  }
+}
+
+.eyebrow {
+  @include eyebrow;
+}
+
+.grid {
+  display: grid;
+  gap: 24px;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@include tablet {
+
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@include mobile {
+
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+// ---- buttons ----
+.btn {
+  @include focus-ring;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: $fs-button;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: $radius-pill;
+  border: 1px solid transparent;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
+
+  @include mobile {
+    font-size: 13.3px;
+  }
+}
+
+.btn-primary {
+  background: $gradient-accent;
+  color: $white;
+  box-shadow: $shadow-sm;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-md;
+  }
+}
+
+.btn-navy {
+  background: $navy;
+  color: $white;
+
+  &:hover {
+    background: $navy-light;
+    transform: translateY(-2px);
+  }
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: rgba(8, 44, 92, 0.18);
+  color: $navy;
+
+  &:hover {
+    border-color: $navy;
+    background: rgba(8, 44, 92, 0.04);
+  }
+}
+
+.btn-outline-light {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.4);
+  color: $white;
+
+  &:hover {
+    border-color: $white;
+    background: rgba(255, 255, 255, 0.08);
+  }
+}
+
+.btn-sm {
+  padding: 10px 20px;
+  font-size: $fs-small;
+}
+
+// ---- shared card ----
+.card {
+  @include card;
+  @include card-hover;
+  padding: 28px;
+}
+
+.icon-badge {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $teal-pale;
+  color: $teal;
+  margin-bottom: 18px;
+  flex-shrink: 0;
+
+  svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: $radius-pill;
+  background: $grey-bg;
+  font-size: $fs-small;
+  font-weight: 600;
+  color: $navy;
+}
+
+.svg-wrap {
+  width: 100%;
+
+  svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+.divider {
+  height: 1px;
+  background: $border;
+  border: none;
+  margin: 0;
+}
+
+// Must stay last — see the note at the top of _reveal.scss.
+@include scroll-reveal;

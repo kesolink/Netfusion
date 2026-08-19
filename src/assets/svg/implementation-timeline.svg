@@ -1,0 +1,62 @@
+<svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Implementation roadmap: discovery and planning, configuration, data migration and testing, then go-live, spanning eight to twelve weeks">
+<defs>
+  <linearGradient id="nf3-track" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#2E9B9C"></stop>
+    <stop offset="100%" stop-color="#082C5C"></stop>
+  </linearGradient>
+  <filter id="nf3-shadow" x="-60%" y="-60%" width="220%" height="220%">
+    <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#082C5C" flood-opacity="0.15"></feDropShadow>
+  </filter>
+</defs>
+
+<text x="30" y="34" font-size="15" font-weight="700" fill="#111827" font-family="Inter, 'Segoe UI', sans-serif">Go live in 8&#8211;12 weeks</text>
+<text x="30" y="52" font-size="10.5" fill="#6B7280" font-family="Inter, 'Segoe UI', sans-serif">A proven implementation methodology, start to finish</text>
+
+<!-- base track -->
+<line x1="70" y1="150" x2="630" y2="150" stroke="#E5EAF1" stroke-width="6" stroke-linecap="round"></line>
+<line x1="70" y1="150" x2="630" y2="150" stroke="url(#nf3-track)" stroke-width="6" stroke-linecap="round">
+  <animate attributeName="x2" values="70;630" dur="2.4s" fill="freeze"></animate>
+</line>
+
+<g font-family="Inter, 'Segoe UI', sans-serif">
+  <!-- Step 1 -->
+  <g filter="url(#nf3-shadow)">
+    <circle cx="140" cy="150" r="24" fill="#FFFFFF" stroke="#2E9B9C" stroke-width="2.5"></circle>
+  </g>
+  <path d="M 131 150 l 6 6 l 12 -13" fill="none" stroke="#2E9B9C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path>
+  <text x="140" y="196" text-anchor="middle" font-size="11" font-weight="700" fill="#111827">Discovery &amp;</text>
+  <text x="140" y="209" text-anchor="middle" font-size="11" font-weight="700" fill="#111827">Planning</text>
+  <text x="140" y="118" text-anchor="middle" font-size="9" fill="#2E9B9C" font-weight="600">Week 1&#8211;2</text>
+
+  <!-- Step 2 -->
+  <g filter="url(#nf3-shadow)">
+    <circle cx="280" cy="150" r="24" fill="#FFFFFF" stroke="#2E9B9C" stroke-width="2.5"></circle>
+  </g>
+  <path d="M 271 150 l 6 6 l 12 -13" fill="none" stroke="#2E9B9C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path>
+  <text x="280" y="196" text-anchor="middle" font-size="11" font-weight="700" fill="#111827">System</text>
+  <text x="280" y="209" text-anchor="middle" font-size="11" font-weight="700" fill="#111827">Configuration</text>
+  <text x="280" y="118" text-anchor="middle" font-size="9" fill="#2E9B9C" font-weight="600">Week 3&#8211;6</text>
+
+  <!-- Step 3 -->
+  <g filter="url(#nf3-shadow)">
+    <circle cx="420" cy="150" r="24" fill="#FFFFFF" stroke="#082C5C" stroke-width="2.5"></circle>
+  </g>
+  <path d="M 411 150 l 6 6 l 12 -13" fill="none" stroke="#082C5C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path>
+  <text x="420" y="196" text-anchor="middle" font-size="11" font-weight="700" fill="#111827">Data Migration</text>
+  <text x="420" y="209" text-anchor="middle" font-size="11" font-weight="700" fill="#111827">&amp; Testing</text>
+  <text x="420" y="118" text-anchor="middle" font-size="9" fill="#082C5C" font-weight="600">Week 7&#8211;10</text>
+
+  <!-- Step 4: Go live -->
+  <g filter="url(#nf3-shadow)">
+    <circle cx="560" cy="150" r="27" fill="#082C5C"></circle>
+  </g>
+  <circle cx="560" cy="150" r="34" fill="none" stroke="#082C5C" stroke-width="1.5" opacity="0.3">
+    <animate attributeName="r" values="27;40;27" dur="2.6s" repeatCount="indefinite"></animate>
+    <animate attributeName="opacity" values="0.45;0;0.45" dur="2.6s" repeatCount="indefinite"></animate>
+  </circle>
+  <path d="M 553 143 l 4 -8 l 4 8 l 6 3 l -20 0 Z" fill="#FFFFFF" transform="translate(0 1)"></path>
+  <path d="M 560 137 l 0 20" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round"></path>
+  <text x="560" y="199" text-anchor="middle" font-size="12" font-weight="700" fill="#082C5C">Go Live</text>
+  <text x="560" y="118" text-anchor="middle" font-size="9" fill="#082C5C" font-weight="600">Week 11&#8211;12</text>
+</g>
+</svg>

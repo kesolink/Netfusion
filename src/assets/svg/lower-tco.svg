@@ -1,0 +1,46 @@
+<svg viewBox="0 0 480 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lower total cost of ownership: cost decreasing over time while platform value increases">
+<defs>
+  <linearGradient id="nf9-cost" x1="0" y1="1" x2="0" y2="0">
+    <stop offset="0%" stop-color="#E5EAF1"></stop><stop offset="100%" stop-color="#C7D2E0"></stop>
+  </linearGradient>
+  <linearGradient id="nf9-val" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#2E9B9C"></stop><stop offset="100%" stop-color="#082C5C"></stop>
+  </linearGradient>
+  <filter id="nf9-sh" x="-60%" y="-60%" width="220%" height="220%">
+    <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#082C5C" flood-opacity="0.15"></feDropShadow>
+  </filter>
+</defs>
+<g font-family="Inter, 'Segoe UI', sans-serif">
+<g filter="url(#nf9-sh)"><rect x="30" y="26" width="420" height="228" rx="18" fill="#FFFFFF"></rect></g>
+<text x="54" y="58" font-size="13" font-weight="700" fill="#111827">Lower Total Cost of Ownership</text>
+
+<!-- cost bars, descending -->
+<g>
+  <rect x="70" y="150" width="34" height="70" rx="4" fill="url(#nf9-cost)"></rect>
+  <rect x="130" y="165" width="34" height="55" rx="4" fill="url(#nf9-cost)"></rect>
+  <rect x="190" y="180" width="34" height="40" rx="4" fill="url(#nf9-cost)"></rect>
+  <rect x="250" y="195" width="34" height="25" rx="4" fill="url(#nf9-cost)">
+    <animate attributeName="height" values="35;25;35" dur="3s" repeatCount="indefinite"></animate>
+    <animate attributeName="y" values="185;195;185" dur="3s" repeatCount="indefinite"></animate>
+  </rect>
+</g>
+<line x1="60" y1="220" x2="300" y2="220" stroke="#E5EAF1" stroke-width="1"></line>
+<text x="87" y="234" text-anchor="middle" font-size="8" fill="#6B7280">Y1</text>
+<text x="147" y="234" text-anchor="middle" font-size="8" fill="#6B7280">Y2</text>
+<text x="207" y="234" text-anchor="middle" font-size="8" fill="#6B7280">Y3</text>
+<text x="267" y="234" text-anchor="middle" font-size="8" fill="#6B7280">Y4</text>
+<text x="70" y="142" font-size="8.5" fill="#082C5C" font-weight="600">Cost</text>
+
+<!-- value line rising -->
+<path d="M330 200 C 360 170, 380 120, 420 80" fill="none" stroke="url(#nf9-val)" stroke-width="3" stroke-linecap="round"></path>
+<circle cx="420" cy="80" r="5" fill="#082C5C"></circle>
+<circle cx="420" cy="80" r="9" fill="none" stroke="#082C5C" stroke-width="1.5" opacity="0.4">
+  <animate attributeName="r" values="5;14;5" dur="2.6s" repeatCount="indefinite"></animate>
+  <animate attributeName="opacity" values="0.5;0;0.5" dur="2.6s" repeatCount="indefinite"></animate>
+</circle>
+<text x="330" y="215" font-size="8.5" fill="#2E9B9C" font-weight="600">Value delivered</text>
+
+<rect x="330" y="140" width="120" height="34" rx="10" fill="#F5F7FA"></rect>
+<text x="390" y="161" text-anchor="middle" font-size="11" font-weight="700" fill="#082C5C">Modular pricing</text>
+</g>
+</svg>

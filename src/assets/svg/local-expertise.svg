@@ -1,0 +1,50 @@
+<svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Local expertise, regional vision: a network of support locations across the region">
+<defs>
+  <radialGradient id="nf10-glow" cx="50%" cy="45%" r="60%">
+    <stop offset="0%" stop-color="#2E9B9C" stop-opacity="0.16"></stop>
+    <stop offset="100%" stop-color="#2E9B9C" stop-opacity="0"></stop>
+  </radialGradient>
+  <filter id="nf10-sh" x="-60%" y="-60%" width="220%" height="220%">
+    <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#082C5C" flood-opacity="0.15"></feDropShadow>
+  </filter>
+</defs>
+<g font-family="Inter, 'Segoe UI', sans-serif">
+<ellipse cx="240" cy="170" rx="220" ry="150" fill="url(#nf10-glow)"></ellipse>
+
+<!-- simplified continent-style landmass -->
+<path d="M170 60 C 210 55, 250 70, 260 100 C 275 110, 300 105, 310 130 C 320 155, 305 175, 295 200
+  C 305 220, 300 250, 275 265 C 260 275, 245 268, 235 250 C 220 255, 205 245, 200 225
+  C 175 220, 160 200, 165 175 C 145 165, 140 140, 155 115 C 150 95, 155 70, 170 60 Z"
+  fill="#EEF2F7" stroke="#D7DFEA" stroke-width="1.5"></path>
+
+<!-- support location nodes -->
+<g>
+  <circle cx="200" cy="110" r="5" fill="#082C5C"></circle>
+  <circle cx="240" cy="150" r="7" fill="#2E9B9C"></circle>
+  <circle cx="240" cy="150" r="12" fill="none" stroke="#2E9B9C" stroke-width="1.5" opacity="0.5">
+    <animate attributeName="r" values="7;20;7" dur="3s" repeatCount="indefinite"></animate>
+    <animate attributeName="opacity" values="0.55;0;0.55" dur="3s" repeatCount="indefinite"></animate>
+  </circle>
+  <circle cx="270" cy="200" r="5" fill="#082C5C"></circle>
+  <circle cx="210" cy="220" r="5" fill="#082C5C"></circle>
+  <circle cx="255" cy="120" r="4" fill="#082C5C"></circle>
+</g>
+<g stroke="#B9C6D6" stroke-width="1.2">
+  <line x1="200" y1="110" x2="240" y2="150"></line>
+  <line x1="240" y1="150" x2="270" y2="200"></line>
+  <line x1="240" y1="150" x2="210" y2="220"></line>
+  <line x1="240" y1="150" x2="255" y2="120"></line>
+</g>
+
+<!-- floating badge -->
+<g filter="url(#nf10-sh)"><rect x="20" y="20" width="180" height="56" rx="16" fill="#FFFFFF"></rect></g>
+<text x="42" y="44" font-size="16" font-weight="700" fill="#082C5C">20+</text>
+<text x="42" y="60" font-size="9" fill="#6B7280">Years combined banking &amp;</text>
+<text x="42" y="70" font-size="9" fill="#6B7280">fintech expertise</text>
+
+<g filter="url(#nf10-sh)"><rect x="290" y="244" width="170" height="56" rx="16" fill="#082C5C"></rect></g>
+<text x="312" y="268" font-size="14" font-weight="700" fill="#FFFFFF">24/7</text>
+<text x="312" y="284" font-size="9" fill="#B9CBE0">Local implementation &amp;</text>
+<text x="312" y="294" font-size="9" fill="#B9CBE0">customer success teams</text>
+</g>
+</svg>

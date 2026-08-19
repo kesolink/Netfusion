@@ -1,0 +1,61 @@
+<svg viewBox="0 0 640 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Industries served: commercial banks, microfinance banks, mortgage banks, fintechs, cooperative societies, and government institutions">
+<defs>
+  <filter id="nf8-sh" x="-60%" y="-60%" width="220%" height="220%">
+    <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#082C5C" flood-opacity="0.13"></feDropShadow>
+  </filter>
+</defs>
+<g font-family="Inter, 'Segoe UI', sans-serif">
+<!-- 6 cards, 3x2 grid, each 190x100 -->
+<g>
+<!-- Commercial Banks -->
+<g filter="url(#nf8-sh)"><rect x="20" y="20" width="190" height="96" rx="14" fill="#FFFFFF"></rect></g>
+<circle cx="52" cy="50" r="14" fill="#2E9B9C" fill-opacity="0.14"></circle>
+<path d="M42 54 h20 M44 54 v-8 l8 -5 l8 5 v8" fill="none" stroke="#2E9B9C" stroke-width="1.6" stroke-linejoin="round"></path>
+<text x="76" y="48" font-size="11" font-weight="700" fill="#111827">Commercial</text>
+<text x="76" y="61" font-size="11" font-weight="700" fill="#111827">Banks</text>
+
+<!-- Microfinance -->
+<g filter="url(#nf8-sh)"><rect x="225" y="20" width="190" height="96" rx="14" fill="#FFFFFF"></rect></g>
+<circle cx="257" cy="50" r="14" fill="#2E9B9C" fill-opacity="0.14"></circle>
+<circle cx="257" cy="46" r="4" fill="none" stroke="#2E9B9C" stroke-width="1.5"></circle>
+<path d="M250 58 c0 -5 3.5 -8 7 -8 s7 3 7 8" fill="none" stroke="#2E9B9C" stroke-width="1.5" stroke-linecap="round"></path>
+<text x="281" y="48" font-size="11" font-weight="700" fill="#111827">Microfinance</text>
+<text x="281" y="61" font-size="11" font-weight="700" fill="#111827">Banks</text>
+
+<!-- Mortgage -->
+<g filter="url(#nf8-sh)"><rect x="430" y="20" width="190" height="96" rx="14" fill="#FFFFFF"></rect></g>
+<circle cx="462" cy="50" r="14" fill="#2E9B9C" fill-opacity="0.14"></circle>
+<path d="M453 58 l9 -9 l9 9 M456 55 v6 h12 v-6" fill="none" stroke="#2E9B9C" stroke-width="1.5" stroke-linejoin="round"></path>
+<text x="486" y="48" font-size="11" font-weight="700" fill="#111827">Mortgage</text>
+<text x="486" y="61" font-size="11" font-weight="700" fill="#111827">Banks</text>
+
+<!-- Fintechs -->
+<g filter="url(#nf8-sh)"><rect x="20" y="140" width="190" height="96" rx="14" fill="#FFFFFF"></rect></g>
+<circle cx="52" cy="170" r="14" fill="#2E9B9C" fill-opacity="0.14"></circle>
+<path d="M54 162 l-8 9 h6 l-2 8 l8 -9 h-6 Z" fill="#2E9B9C"></path>
+<text x="76" y="167" font-size="11" font-weight="700" fill="#111827">Fintechs</text>
+
+<!-- Cooperative Societies -->
+<g filter="url(#nf8-sh)"><rect x="225" y="140" width="190" height="96" rx="14" fill="#FFFFFF"></rect></g>
+<circle cx="257" cy="170" r="14" fill="#2E9B9C" fill-opacity="0.14"></circle>
+<circle cx="252" cy="166" r="3" fill="none" stroke="#2E9B9C" stroke-width="1.3"></circle>
+<circle cx="262" cy="166" r="3" fill="none" stroke="#2E9B9C" stroke-width="1.3"></circle>
+<path d="M247 178 c0 -4 3 -6 5.5 -6 s5.5 2 5.5 6 M257 178 c0 -4 3 -6 5.5 -6 s5.5 2 5.5 6" fill="none" stroke="#2E9B9C" stroke-width="1.3" stroke-linecap="round"></path>
+<text x="281" y="167" font-size="11" font-weight="700" fill="#111827">Cooperative</text>
+<text x="281" y="180" font-size="11" font-weight="700" fill="#111827">Societies</text>
+
+<!-- Government -->
+<g filter="url(#nf8-sh)"><rect x="430" y="140" width="190" height="96" rx="14" fill="#FFFFFF"></rect></g>
+<circle cx="462" cy="170" r="14" fill="#2E9B9C" fill-opacity="0.14"></circle>
+<path d="M462 161 l10 5 h-20 Z M454 168 v9 M462 168 v9 M470 168 v9 M452 177 h20" fill="none" stroke="#2E9B9C" stroke-width="1.4" stroke-linejoin="round"></path>
+<text x="486" y="167" font-size="11" font-weight="700" fill="#111827">Government</text>
+<text x="486" y="180" font-size="11" font-weight="700" fill="#111827">Institutions</text>
+</g>
+
+<!-- subtle traveling highlight dot across the grid -->
+<circle r="3" fill="#082C5C" opacity="0.7">
+  <animateMotion dur="6s" repeatCount="indefinite"
+    path="M52 116 L52 20 M52 20 L257 20 L257 116 M257 116 L462 116 L462 20"></animateMotion>
+</circle>
+</g>
+</svg>

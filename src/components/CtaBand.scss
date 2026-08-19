@@ -1,0 +1,31 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.cta-band {
+  &__inner {
+    background: $gradient-navy;
+    border-radius: $radius-lg;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 32px;
+    padding: 56px;
+    overflow: hidden;
+    @include tablet { grid-template-columns: 1fr; padding: 40px 28px; text-align: center; }
+  }
+  &__text {
+    .eyebrow { color: $teal-light; }
+    h2 { color: $white; margin: 14px 0 12px; }
+    p { color: rgba(255, 255, 255, 0.75); }
+  }
+  &__actions {
+    display: flex;
+    gap: 14px;
+    margin-top: 28px;
+    @include tablet { justify-content: center; flex-wrap: wrap; }
+    .btn-outline { border-color: rgba(255,255,255,0.35); color: $white; &:hover { border-color: $white; background: rgba(255,255,255,0.08);} }
+  }
+  &__art {
+    @include tablet { display: none; }
+  }
+}

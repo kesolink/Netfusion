@@ -1,0 +1,67 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.about-hero {
+  padding-top: clamp(48px, 8vw, 88px);
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    gap: 48px;
+    align-items: center;
+    @include tablet { grid-template-columns: 1fr; }
+  }
+  &__copy {
+    h1 { margin: 16px 0 18px; }
+    .lead { margin-bottom: 16px; }
+  }
+  &__photo img {
+    width: 100%;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-md;
+    aspect-ratio: 4/3.2;
+    object-fit: cover;
+  }
+}
+
+.mission {
+  &__inner {
+    display: grid;
+    grid-template-columns: 0.9fr 1fr;
+    gap: 48px;
+    align-items: center;
+    @include tablet { grid-template-columns: 1fr; }
+  }
+  &__copy { display: flex; flex-direction: column; gap: 28px; }
+  &__block h3 { margin-bottom: 10px; }
+}
+
+.values {
+  padding-block: 64px 8px;
+  background: $white;
+}
+
+.expertise {
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    gap: 56px;
+    align-items: center;
+    @include tablet { grid-template-columns: 1fr; }
+  }
+  &__copy h2 { margin: 14px 0 16px; }
+  &__photo {
+    margin-top: 40px;
+    max-width: 420px;
+    @include mobile { margin-top: 56px; }
+  }
+  &__ring {
+    text-align: center;
+    @include tablet { margin-top: 24px; }
+  }
+  &__ring-caption {
+    margin-top: 24px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: $navy;
+  }
+}

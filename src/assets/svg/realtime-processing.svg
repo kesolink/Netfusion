@@ -1,0 +1,37 @@
+<svg viewBox="0 0 480 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Real-time transaction processing pulse graphic">
+<defs>
+  <linearGradient id="nf7-pulse" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#2E9B9C" stop-opacity="0"></stop>
+    <stop offset="50%" stop-color="#2E9B9C"></stop>
+    <stop offset="100%" stop-color="#082C5C"></stop>
+  </linearGradient>
+  <filter id="nf7-sh" x="-60%" y="-60%" width="220%" height="220%">
+    <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#082C5C" flood-opacity="0.15"></feDropShadow>
+  </filter>
+</defs>
+<g font-family="Inter, 'Segoe UI', sans-serif">
+<g filter="url(#nf7-sh)"><rect x="30" y="30" width="420" height="200" rx="20" fill="#FFFFFF"></rect></g>
+<text x="56" y="64" font-size="13" font-weight="700" fill="#111827">Real-Time Processing</text>
+<circle cx="424" cy="59" r="4" fill="#2E9B9C">
+  <animate attributeName="opacity" values="1;0.25;1" dur="1.2s" repeatCount="indefinite"></animate>
+</circle>
+<text x="404" y="63" text-anchor="end" font-size="8.5" fill="#2E9B9C">LIVE</text>
+
+<line x1="56" y1="160" x2="424" y2="160" stroke="#E5EAF1" stroke-width="1"></line>
+<path d="M56 160 L 130 160 L 150 110 L 170 190 L 190 130 L 210 160 L 424 160"
+  fill="none" stroke="url(#nf7-pulse)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path>
+<circle r="4" fill="#082C5C">
+  <animateMotion dur="2.8s" repeatCount="indefinite"
+    path="M56 160 L 130 160 L 150 110 L 170 190 L 190 130 L 210 160 L 424 160"></animateMotion>
+</circle>
+
+<g>
+  <rect x="56" y="188" width="70" height="28" rx="8" fill="#F5F7FA"></rect>
+  <text x="91" y="206" text-anchor="middle" font-size="10" font-weight="700" fill="#082C5C">&lt; 200ms</text>
+</g>
+<g>
+  <rect x="354" y="188" width="70" height="28" rx="8" fill="#F5F7FA"></rect>
+  <text x="389" y="206" text-anchor="middle" font-size="10" font-weight="700" fill="#082C5C">1000+ TPS</text>
+</g>
+</g>
+</svg>

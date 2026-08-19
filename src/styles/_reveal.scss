@@ -1,0 +1,57 @@
+// Scroll-reveal animation, driven by <ScrollReveal /> (src/components/ScrollReveal.jsx).
+//
+// Exposed as a mixin rather than plain rules because global.scss has to include
+// it *last*: several reveal targets (.card, .btn) set their own `transition`
+// shorthand at the same specificity, and the reveal transition needs to win.
+
+@use 'variables' as *;
+@use 'mixins' as *;
+
+$reveal-duration: 0.7s;
+$reveal-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+$reveal-shift: 28px;
+
+@mixin scroll-reveal {
+  [data-reveal] {
+    opacity: 0;
+    will-change: opacity, transform;
+    transition:
+      opacity $reveal-duration $reveal-ease,
+      transform $reveal-duration $reveal-ease;
+  }
+
+  [data-reveal='up'] { transform: translateY($reveal-shift); }
+  [data-reveal='zoom'] { transform: translateY(20px) scale(0.965); }
+  [data-reveal='fade'] { transform: none; }
+  [data-reveal='slide-start'] { transform: translateX(-36px); }
+  [data-reveal='slide-end'] { transform: translateX(36px); }
+
+  // Reversed rows are mirrored, so they arrive from the opposite edge.
+  .alt-row--reverse [data-reveal='slide-start'] { transform: translateX(36px); }
+  .alt-row--reverse [data-reveal='slide-end'] { transform: translateX(-36px); }
+
+  // Once the row stacks there is no left/right to slide from.
+  @include tablet {
+    [data-reveal='slide-start'],
+    [data-reveal='slide-end'],
+    .alt-row--reverse [data-reveal='slide-start'],
+    .alt-row--reverse [data-reveal='slide-end'] {
+      transform: translateY($reveal-shift);
+    }
+  }
+
+  // Declared last so it beats the two-class reversed/stacked rules above.
+  [data-reveal][data-revealed] {
+    opacity: 1;
+    transform: none;
+  }
+
+  // ScrollReveal bails out entirely here, but keep a belt-and-braces rule so a
+  // stale attribute can never leave content hidden.
+  @media (prefers-reduced-motion: reduce) {
+    [data-reveal] {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}

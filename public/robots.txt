@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://netfusionideal.com/sitemap.xml

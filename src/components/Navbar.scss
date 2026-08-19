@@ -1,0 +1,146 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.nf-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+
+  &--scrolled {
+    border-color: $border;
+    box-shadow: 0 6px 24px rgba(8, 44, 92, 0.06);
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 76px;
+    gap: 20px;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: $font-heading;
+    font-weight: 800;
+    font-size: 1.15rem;
+    color: $navy;
+    letter-spacing: -0.01em;
+  }
+
+  &__mark svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+
+    @include desktop-sm {
+      display: none;
+    }
+  }
+
+  &__link {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: $text-dark;
+    padding-block: 8px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 2px;
+      background: $teal;
+      transform: scaleX(0);
+      transition: transform 0.2s ease;
+    }
+
+    &:hover,
+    &.is-active {
+      color: $navy;
+    }
+
+    &.is-active::after {
+      transform: scaleX(1);
+    }
+  }
+
+  &__cta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    @include desktop-sm {
+      display: none;
+    }
+  }
+
+  &__burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    padding: 8px;
+
+    span {
+      width: 22px;
+      height: 2px;
+      background: $navy;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    &.is-open span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    &.is-open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    &.is-open span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    @include desktop-sm {
+      display: flex;
+    }
+  }
+
+  &__mobile {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px $container-pad 20px;
+    background: $white;
+    border-top: 1px solid $border;
+
+    &.is-open {
+      display: flex;
+    }
+
+    .nf-nav__mobile-link {
+      padding: 12px 4px;
+      font-weight: 600;
+      border-bottom: 1px solid $border;
+    }
+
+    .btn {
+      margin-top: 12px;
+      justify-content: center;
+    }
+  }
+}
