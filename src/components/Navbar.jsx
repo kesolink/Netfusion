@@ -27,7 +27,7 @@ export default function Navbar() {
     <header className={`nf-nav ${scrolled ? 'nf-nav--scrolled' : ''}`}>
       <div className="container nf-nav__inner">
         <NavLink to="/" className="nf-nav__logo" onClick={() => setOpen(false)}>
-          <img src="/logos/Netfusion-logo.jpg" alt="NETFUSION" style={{ height: '42px', width: 'auto', objectFit: 'contain' }} />
+          <img src="/logos/netfusion-main-logo.png" alt="NETFUSION" style={{ height: '42px', width: 'auto', objectFit: 'contain' }} />
         </NavLink>
 
         <nav className="nf-nav__links">
