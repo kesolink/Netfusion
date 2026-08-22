@@ -9,6 +9,7 @@ import industriesSvg from '../assets/svg/industries-served.svg';
 import testimonialSvg from '../assets/svg/testimonial-card.svg';
 import servicegroupimg from '../assets/image/netfusion-services.jpg';
 import partnership from '../assets/image/netfusion-partnership.jpg';
+import promoVideo from '../assets/Video/Promo-video.mp4';
 import modern from "../assets/image/Modern.avif"
 import hand from "../assets/image/Shaking-Hands.avif"
 import testimony from "../assets/image/testimony.png"
@@ -273,6 +274,26 @@ export default function Home() {
         </div>
       </section>
 
+      {/* PROMO VIDEO */}
+      <section className="section home-video">
+        <div className="container">
+          <div className="home-video__head">
+            <span className="eyebrow">&mdash; WATCH PRODUCT DEMO</span>
+            <h2>Experience NETFUSION in Action</h2>
+            <p>See how our next-generation core banking and digital solutions power scale, efficiency, and growth for financial institutions.</p>
+          </div>
+          <div className="home-video__player-wrap">
+            <video 
+              className="home-video__video" 
+              src={promoVideo} 
+              controls 
+              preload="metadata" 
+              playsInline
+            />
+          </div>
+        </div>
+      </section>
+
       {/* PRODUCTS OVERVIEW */}
       <section className="section home-products">
         <div className="container">
@@ -327,7 +348,7 @@ export default function Home() {
             <h2>Built for every kind of financial institution</h2>
           </div>
           <div className="svg-wrap industries__art">
-            <img src={industriesSvg} alt="Industries served: commercial banks, microfinance banks, mortgage banks, fintechs, cooperative societies and government institutions" />
+            <img src={industriesSvg} alt="Industries served: commercial banks, microfinance banks, mortgage banks, fintechs, cooperative societies and SACCOS" />
           </div>
         </div>
       </section>

@@ -44,26 +44,33 @@ const products = [
   { name: 'AML & Compliance Solution', desc: 'Continuous transaction monitoring built around local and international regulation.' },
   { name: 'API Integration Platform', desc: 'Open, documented APIs to connect your core to the wider financial ecosystem.' },
   { name: 'Reporting & Analytics Dashboard', desc: 'Real-time, decision-ready reporting across branches, products and portfolios.' },
+  { name: 'All-Financial POS Solution', desc: 'Seamless in-store and on-the-go payments acceptance with real-time reconciliation.' },
+  { name: 'All-Financial Digital Banking', desc: 'Next-generation digital experiences across web and mobile with unified identity and security.' },
+  { name: 'ATM Cards Integration', desc: 'Instant card issuance, lifecycle management and switch integration made simple.' },
+  { name: 'USSD Solution', desc: 'Secure, reliable USSD banking for feature phones and low-bandwidth environments.' },
+  { name: 'Global Standing Instruction (GSI) Integration', desc: 'Automate recurring payments and collections across borders with full control.' },
+  { name: 'AI AML Integration', desc: 'Leverage AI/ML to detect risk, reduce false positives and stay ahead of financial crime.' },
 ];
 
 const modules = [
-  { name: 'Customer Information Management (CIF)', desc: 'A single customer record shared across every product and channel.' },
-  { name: 'Teller Operations', desc: 'Fast, accurate over-the-counter transaction processing.' },
-  { name: 'Account Management', desc: 'Open, manage and reconcile savings, current and deposit accounts.' },
-  { name: 'Loan Management', desc: 'Origination through to repayment, with configurable workflows.' },
-  { name: 'Credit Management', desc: 'Scoring, exposure limits and portfolio-level credit control.' },
-  { name: 'Funds Transfer', desc: 'Intra-bank and interbank transfers, processed in real time.' },
-  { name: 'Investment Management', desc: 'Track and manage fixed deposits and investment products.' },
-  { name: 'Fixed Assets', desc: 'Register, depreciate and report on institutional assets.' },
-  { name: 'General Ledger', desc: 'A single source of financial truth, always audit-ready.' },
-  { name: 'Audit Trail & Reports', desc: 'Every action logged, timestamped and traceable.' },
-  { name: 'Mobile Banking', desc: 'A branded mobile experience for your customers, on any device.' },
-  { name: 'Internet Banking', desc: 'Secure, full-featured online banking for individuals and businesses.' },
-  { name: 'Agency Banking', desc: 'Extend your reach through agents without extending your risk.' },
-  { name: 'API Integrations', desc: 'Plug into NIP, NPS, card schemes and third-party services.' },
-  { name: 'AML & KYC', desc: 'Screening, watchlists and know-your-customer workflows, built in.' },
-  { name: 'CRM', desc: 'Manage relationships, service requests and follow-ups in one place.' },
-  { name: 'Reporting & Analytics', desc: 'Configurable dashboards for operations, risk and the board.' },
+  'Customer Management',
+  'Account Management',
+  'Loans & Credit',
+  'Financial Management',
+  'Fixed Assets',
+  'Fixed Deposit & Investment',
+  'Regulatory Reporting',
+  'E-Channels',
+  'Teller & Vault',
+  'Funds Transfer',
+  'NIP & NPS',
+  'Collateral',
+  'HQ Operations',
+  'AML / KYC',
+  'Audit & Controls',
+  'CABAL Dashboards',
+  'Reporting & Analytics',
+  'Administration',
 ];
 
 export default function Products() {
@@ -114,7 +121,7 @@ export default function Products() {
         <div className="container">
           <div className="section-head center">
             <span className="eyebrow">The suite</span>
-            <h2>Eight products. One connected platform.</h2>
+            <h2>Fourteen products. One connected platform.</h2>
           </div>
           <div className="grid grid-4">
             {products.map((p) => (
@@ -171,18 +178,13 @@ export default function Products() {
 
       <section className="section modules">
         <div className="container">
-          <div className="section-head center">
-            <span className="eyebrow">Inside the suite</span>
-            <h2>Modules within the Core Banking Suite</h2>
+          <div className="section-head center modules__head">
+            <h2>One integrated core. <span className="highlight-cyan">18 modules.</span></h2>
           </div>
-          <div className="grid grid-3 modules__grid">
-            {modules.map((m) => (
-              <div className="modules__item" key={m.name}>
-                <span className="modules__dot" />
-                <div>
-                  <h3>{m.name}</h3>
-                  <p>{m.desc}</p>
-                </div>
+          <div className="modules__grid">
+            {modules.map((name) => (
+              <div className="modules__card" key={name}>
+                <span className="modules__card-text">{name}</span>
               </div>
             ))}
           </div>

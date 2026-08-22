@@ -9,7 +9,7 @@ import customerSuccessImg from '../assets/image/netfusion-customer-success.jpg';
 import './Support.scss';
 
 const channels = [
-  { title: 'Call Us', value: '0700 56887 2215', note: 'Mon–Fri, 8am–6pm WAT' },
+  { title: 'Call Us', value: '08033677111', note: 'Mon–Fri, 8am–6pm WAT' },
   { title: 'Email Us', value: 'info@netfusionideal.com', note: 'Sales: sales@netfusionideal.com' },
   { title: 'WhatsApp', value: '+234 704 551 2215', note: 'Chat with our support team' },
   { title: 'Book a Demo', value: 'calendly.com/allfinancialbanking', note: 'Pick a time that works for you' },
