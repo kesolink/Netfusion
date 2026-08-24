@@ -5,7 +5,8 @@ import { toast } from 'react-toastify';
 import SEOHead, { breadcrumbSchema } from '../components/SEOHead';
 import contactSvg from '../assets/svg/contact-pin.svg';
 import securitySvg from '../assets/svg/security-compliance.svg';
-import customerSuccessImg from '../assets/image/netfusion-customer-success.jpg';
+import customerSuccessImg from '../assets/image/service.png';
+import supportimg from '../assets/image/support.png';
 import './Support.scss';
 
 const channels = [
@@ -128,7 +129,7 @@ export default function Support() {
       <section className="section section--alt contact-form">
         <div className="container contact-form__inner">
           <div className="contact-form__photo">
-            <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=760&q=80" alt="NETFUSION support specialist assisting a client" />
+            <img src={supportimg} alt="NETFUSION support specialist assisting a client" />
             <div className="contact-form__badge">
               <strong>24/7</strong>
               <span>Technical support</span>

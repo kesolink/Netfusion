@@ -9,6 +9,7 @@ import backupImg from '../assets/image/backup.png';
 import customer from "../assets/image/netfusion-customer-success.jpg"
 import board from "../assets/image/board-paper.png";
 import build from"../assets/image/building.png"
+import Excellence from "../assets/image/Excellence.png"
 import './About.scss';
 
 const values = [
@@ -45,7 +46,7 @@ const values = [
   {
     name: 'Excellence',
     desc: 'From implementation to ongoing support, we focus on quality, reliability and continuous improvement in everything we deliver.',
-    image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80',
+    image: Excellence,
     alt: 'NETFUSION engineer focused on delivering a project milestone',
     shape: 'rounded',
   },
@@ -58,7 +59,7 @@ const teamPhotos = [
   'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=160&q=80',
   'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=160&q=80',
   'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=160&q=80',
-  'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=160&q=80',
+  Excellence,
 ];
 
 export default function About() {
@@ -75,7 +76,7 @@ export default function About() {
         <div className="container about-hero__inner">
           <div className="about-hero__copy">
             <span className="eyebrow">About NETFUSION</span>
-            <h1>Ideal &amp; Innovations Solutions Ltd</h1>
+            <h1>NetfusionIdeal &amp; Innovations Solutions Ltd</h1>
             <p className="lead">
               NETFUSION is a leading African banking technology company
               dedicated to helping financial institutions build secure,

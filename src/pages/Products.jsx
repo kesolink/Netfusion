@@ -5,6 +5,7 @@ import ecosystemSvg from '../assets/svg/core-banking-ecosystem.svg';
 import integrationsSvg from '../assets/svg/integrations-network.svg';
 import groupimg from "../assets/image/building.png"
 import hand from "../assets/image/Shaking-Hands.avif"
+import groupmain from "../assets/image/group-main.png"
 import { Link } from 'react-router-dom';
 import { PopupButton } from 'react-calendly';
 import './Products.scss';
@@ -13,7 +14,7 @@ const benefits = [
   {
     title: 'Real-Time, Every Time',
     desc: 'Transactions post instantly across branches, agents and digital channels — no overnight batch jobs, no waiting.',
-    image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80',
+    image: groupmain,
     alt: 'Operations team monitoring real-time transaction volumes',
     shape: 'rounded',
     badge: { icon: '\u26A1', text: '1000+ TPS' },
