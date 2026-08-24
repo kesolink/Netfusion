@@ -10,6 +10,9 @@ import customer from "../assets/image/netfusion-customer-success.jpg"
 import board from "../assets/image/board-paper.png";
 import build from"../assets/image/building.png"
 import Excellence from "../assets/image/Excellence.png"
+import circle2 from "../assets/image/circle2-img.png"
+import circle3 from "../assets/image/circle-img.png"
+import circle4 from "../assets/image/netfusion-products.jpg"
 import './About.scss';
 
 const values = [
@@ -53,12 +56,12 @@ const values = [
 ];
 
 const teamPhotos = [
-  'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=160&q=80',
-  'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=160&q=80',
+  circle3,
+  circle4,
   'https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=160&q=80',
   'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=160&q=80',
   'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=160&q=80',
-  'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=160&q=80',
+  circle2,
   Excellence,
 ];
 
@@ -76,7 +79,7 @@ export default function About() {
         <div className="container about-hero__inner">
           <div className="about-hero__copy">
             <span className="eyebrow">About NETFUSION</span>
-            <h1>NetfusionIdeal &amp; Innovations Solutions Ltd</h1>
+            <h1>NetfusionIdeal And Innovations Solutions Ltd</h1>
             <p className="lead">
               NETFUSION is a leading African banking technology company
               dedicated to helping financial institutions build secure,

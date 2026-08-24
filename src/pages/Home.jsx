@@ -13,6 +13,9 @@ import promoVideo from '../assets/Video/Promo-video.mp4';
 import modern from "../assets/image/Modern.avif"
 import hand from "../assets/image/Shaking-Hands.avif"
 import testimony from "../assets/image/testimony.png"
+import zenp from "../assets/image/zenp.jpeg"
+import avatar from "../assets/image/avatarimg.png"
+import avatar2 from "../assets/image/avatar2.png"
 import './Home.scss';
 
 const stats = [
@@ -109,7 +112,7 @@ export default function Home() {
             <div className="home-hero__trust">
               <div className="home-hero__avatars">
                 <img
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80"
+                  src={avatar}
                   alt="Client portrait"
                 />
                 <img
@@ -117,7 +120,7 @@ export default function Home() {
                   alt="Client portrait"
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&q=80"
+                  src={avatar2}
                   alt="Client portrait"
                 />
               </div>
@@ -207,7 +210,7 @@ export default function Home() {
                   <span className="trust-logo-text">Honey MFB</span>
                 </div>
                 <div className="trust-logo-item">
-                  <img src="/logos/zenp.png" alt="ZENP FC" className="trust-logo-img" />
+                  <img src={zenp} alt="ZENP FC" className="trust-logo-img" />
                   <span className="trust-logo-text">ZENP FC</span>
                 </div>
                 <div className="trust-logo-item">
@@ -225,7 +228,7 @@ export default function Home() {
                   <span className="trust-logo-text">Honey MFB</span>
                 </div>
                 <div className="trust-logo-item">
-                  <img src="/logos/zenp.png" alt="ZENP FC" className="trust-logo-img" />
+                  <img src={zenp} alt="ZENP FC" className="trust-logo-img" />
                   <span className="trust-logo-text">ZENP FC</span>
                 </div>
                 <div className="trust-logo-item">
@@ -243,7 +246,7 @@ export default function Home() {
                   <span className="trust-logo-text">Honey MFB</span>
                 </div>
                 <div className="trust-logo-item">
-                  <img src="/logos/zenp.png" alt="ZENP FC" className="trust-logo-img" />
+                  <img src={zenp} alt="ZENP FC" className="trust-logo-img" />
                   <span className="trust-logo-text">ZENP FC</span>
                 </div>
                 <div className="trust-logo-item">
@@ -261,7 +264,7 @@ export default function Home() {
                   <span className="trust-logo-text">Honey MFB</span>
                 </div>
                 <div className="trust-logo-item">
-                  <img src="/logos/zenp.png" alt="ZENP FC" className="trust-logo-img" />
+                  <img src={zenp} alt="ZENP FC" className="trust-logo-img" />
                   <span className="trust-logo-text">ZENP FC</span>
                 </div>
                 <div className="trust-logo-item">
