@@ -78,7 +78,7 @@ export default function About() {
       <section className="about-hero section">
         <div className="container about-hero__inner">
           <div className="about-hero__copy">
-            <span className="eyebrow">About NETFUSION</span>
+            <span className="eyebrow">About</span>
             <h1>NetfusionIdeal And Innovations Solutions Ltd</h1>
             <p className="lead">
               NETFUSION is a leading African banking technology company
@@ -87,7 +87,7 @@ export default function About() {
             </p>
             <p>
               At the heart of our offering is the ALL-FINANCIAL Core Banking
-              Suite &mdash; built for microfinance banks, commercial banks,
+              Suite &mdash; built for microfinance banks, 
               finance houses, SACCOs, credit unions and fintechs. With more
               than 20 years of combined banking and financial technology
               expertise, we help institutions modernize with confidence and

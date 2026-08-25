@@ -16,6 +16,7 @@ import testimony from "../assets/image/testimony.png"
 import zenp from "../assets/image/zenp.jpeg"
 import avatar from "../assets/image/avatarimg.png"
 import avatar2 from "../assets/image/avatar2.png"
+import nirsal from "../assets/image/nirsal.jpeg"
 import './Home.scss';
 
 const stats = [
@@ -192,7 +193,7 @@ export default function Home() {
           <div className="trust-bar__top">
             <div className="trust-bar__heading">
               <span className="eyebrow">&mdash; TRUSTED TECHNOLOGY PARTNER</span>
-              <h2>Trusted by financial institutions <br/><span className="trust-bar__highlight">that move Africa forward.</span></h2>
+              <h2>Trusted by financial institutions <br /><span className="trust-bar__highlight">that move Africa forward.</span></h2>
             </div>
             <div className="trust-bar__desc">
               <p>We partner with ambitious institutions to create banking experiences that are simple, secure and ready for what's next.</p>
@@ -213,9 +214,23 @@ export default function Home() {
                   <img src={zenp} alt="ZENP FC" className="trust-logo-img" />
                   <span className="trust-logo-text">ZENP FC</span>
                 </div>
+              </div>
+              <div className="trust-bar__logos" aria-hidden="true">
                 <div className="trust-logo-item">
-                  <img src="/logos/yct.jpg" alt="YCT Micro Finance" className="trust-logo-img" />
-                  <span className="trust-logo-text">YCT MFB</span>
+                  <img src="/logos/molusi.jpg" alt="Molusi MFB" className="trust-logo-img" />
+                  <span className="trust-logo-text">Molusi MFB</span>
+                </div>
+                <div className="trust-logo-item">
+                  <img src="/logos/hmfb.jpg" alt="HMFB" className="trust-logo-img" />
+                  <span className="trust-logo-text">Honey MFB</span>
+                </div>
+                <div className="trust-logo-item">
+                  <img src={zenp} alt="ZENP FC" className="trust-logo-img" />
+                  <span className="trust-logo-text">ZENP FC</span>
+                </div>
+                <div className="trust-logo-item">
+                  <img src={nirsal} alt="ZEN" className="trust-logo-img" />
+                  <span className="trust-logo-text">NIRSAL</span>
                 </div>
               </div>
               <div className="trust-bar__logos" aria-hidden="true">
@@ -235,23 +250,9 @@ export default function Home() {
                   <img src="/logos/yct.jpg" alt="YCT Micro Finance" className="trust-logo-img" />
                   <span className="trust-logo-text">YCT MFB</span>
                 </div>
-              </div>
-              <div className="trust-bar__logos" aria-hidden="true">
                 <div className="trust-logo-item">
-                  <img src="/logos/molusi.jpg" alt="Molusi MFB" className="trust-logo-img" />
-                  <span className="trust-logo-text">Molusi MFB</span>
-                </div>
-                <div className="trust-logo-item">
-                  <img src="/logos/hmfb.jpg" alt="HMFB" className="trust-logo-img" />
-                  <span className="trust-logo-text">Honey MFB</span>
-                </div>
-                <div className="trust-logo-item">
-                  <img src={zenp} alt="ZENP FC" className="trust-logo-img" />
-                  <span className="trust-logo-text">ZENP FC</span>
-                </div>
-                <div className="trust-logo-item">
-                  <img src="/logos/yct.jpg" alt="YCT Micro Finance" className="trust-logo-img" />
-                  <span className="trust-logo-text">YCT MFB</span>
+                  <img src={nirsal} alt="ZEN" className="trust-logo-img" />
+                  <span className="trust-logo-text">NIRSAL</span>
                 </div>
               </div>
               <div className="trust-bar__logos" aria-hidden="true">
@@ -268,8 +269,8 @@ export default function Home() {
                   <span className="trust-logo-text">ZENP FC</span>
                 </div>
                 <div className="trust-logo-item">
-                  <img src="/logos/yct.jpg" alt="YCT Micro Finance" className="trust-logo-img" />
-                  <span className="trust-logo-text">YCT MFB</span>
+                  <img src={nirsal} alt="ZEN" className="trust-logo-img" />
+                  <span className="trust-logo-text">NIRSAL</span>
                 </div>
               </div>
             </div>
@@ -286,11 +287,11 @@ export default function Home() {
             <p>See how our next-generation core banking and digital solutions power scale, efficiency, and growth for financial institutions.</p>
           </div>
           <div className="home-video__player-wrap">
-            <video 
-              className="home-video__video" 
-              src={promoVideo} 
-              controls 
-              preload="metadata" 
+            <video
+              className="home-video__video"
+              src={promoVideo}
+              controls
+              preload="metadata"
               playsInline
             />
           </div>
@@ -303,7 +304,7 @@ export default function Home() {
           <div className="section-head center">
             <span className="eyebrow">Products</span>
             <h2>Everything your institution needs, in one suite</h2>
-            <p className="lead">Built around the ALL-FINANCIAL Core Banking Suite, for microfinance banks, commercial banks, finance houses, SACCOs, credit unions and fintechs.</p>
+            <p className="lead">Built around the ALL-FINANCIAL Core Banking Suite, for microfinance banks, finance houses, SACCOs, credit unions and fintechs.</p>
           </div>
           <div className="grid grid-4 home-products__grid">
             {products.map((p) => (
@@ -351,7 +352,7 @@ export default function Home() {
             <h2>Built for every kind of financial institution</h2>
           </div>
           <div className="svg-wrap industries__art">
-            <img src={industriesSvg} alt="Industries served: commercial banks, microfinance banks, mortgage banks, fintechs, cooperative societies and SACCOS" />
+            <img src={industriesSvg} alt="Industries served: savings & loans, microfinance banks, mortgage banks, fintechs, cooperative societies and SACCOS" />
           </div>
         </div>
       </section>

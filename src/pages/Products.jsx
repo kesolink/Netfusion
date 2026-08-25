@@ -72,6 +72,8 @@ const modules = [
   'CABAL Dashboards',
   'Reporting & Analytics',
   'Administration',
+  'Cheque Managment',
+  'GSI'
 ];
 
 export default function Products() {
@@ -81,7 +83,7 @@ export default function Products() {
     name: 'ALL-FINANCIAL Core Banking Suite',
     applicationCategory: 'FinanceApplication',
     operatingSystem: 'Cloud, On-Premise, Hybrid',
-    description: 'Enterprise core banking platform for commercial banks, microfinance banks, and fintechs across Africa.',
+    description: 'Enterprise core banking platform for microfinance banks, and fintechs across Africa.',
     provider: { '@type': 'Organization', name: 'NETFUSION Ideal & Innovations Solutions Ltd' },
   };
 
@@ -180,7 +182,7 @@ export default function Products() {
       <section className="section modules">
         <div className="container">
           <div className="section-head center modules__head">
-            <h2>One integrated core. <span className="highlight-cyan">18 modules.</span></h2>
+            <h2>One integrated core. <span className="highlight-cyan">20 modules.</span></h2>
           </div>
           <div className="modules__grid">
             {modules.map((name) => (
@@ -189,7 +191,7 @@ export default function Products() {
               </div>
             ))}
           </div>
-        </div>
+        </div>          
       </section>
 
       <section className="section section--alt integrations">

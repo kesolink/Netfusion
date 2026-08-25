@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container nf-footer__top">
         <div className="nf-footer__brand">
           <div className="nf-footer__logo">
-            <img src="/logos/Netfusion-logo.jpg" alt="NETFUSION" style={{ height: '42px', width: 'auto', objectFit: 'contain', background: '#ffffff', padding: '6px 12px', borderRadius: '8px' }} />
+            <img src="/logos/logowithbackground.jpeg" alt="NETFUSION" style={{ height: '42px', width: 'auto', objectFit: 'contain', background: '#ffffff', padding: '6px 12px', borderRadius: '8px' }} />
           </div>
           <p>
             Enterprise core banking, digital banking and financial technology
