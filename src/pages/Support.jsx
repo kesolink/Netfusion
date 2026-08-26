@@ -90,7 +90,7 @@ export default function Support() {
               clarity with the context to help you make the best next move.
             </p>
             <a href="mailto:support@netfusionideal.com" className="customer-success__link">
-              Meet your support team &nearrow;
+              Meet your support team 
             </a>
           </div>
         </div>

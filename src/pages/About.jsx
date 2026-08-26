@@ -13,6 +13,7 @@ import Excellence from "../assets/image/Excellence.png"
 import circle2 from "../assets/image/circle2-img.png"
 import circle3 from "../assets/image/circle-img.png"
 import circle4 from "../assets/image/netfusion-products.jpg"
+import live from "../assets/svg/hero-network.svg"
 import './About.scss';
 
 const values = [
@@ -79,7 +80,7 @@ export default function About() {
         <div className="container about-hero__inner">
           <div className="about-hero__copy">
             <span className="eyebrow">About</span>
-            <h1>NetfusionIdeal And Innovations Solutions Ltd</h1>
+            <h1>NETFUSION Ideal And Innovations Solutions Ltd</h1>
             <p className="lead">
               NETFUSION is a leading African banking technology company
               dedicated to helping financial institutions build secure,
@@ -168,7 +169,8 @@ export default function About() {
             />
           </div>
           <div className="expertise__ring">
-            <TeamRing photos={teamPhotos} label="NETFUSION" />
+            {/* <TeamRing photos={live} label="NETFUSION" /> */}
+            <img src={live} alt="" />
             <p className="expertise__ring-caption">Implementation &amp; customer success team</p>
           </div>
         </div>

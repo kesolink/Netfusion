@@ -247,10 +247,6 @@ export default function Home() {
                   <span className="trust-logo-text">ZENP FC</span>
                 </div>
                 <div className="trust-logo-item">
-                  <img src="/logos/yct.jpg" alt="YCT Micro Finance" className="trust-logo-img" />
-                  <span className="trust-logo-text">YCT MFB</span>
-                </div>
-                <div className="trust-logo-item">
                   <img src={nirsal} alt="ZEN" className="trust-logo-img" />
                   <span className="trust-logo-text">NIRSAL</span>
                 </div>
@@ -358,7 +354,7 @@ export default function Home() {
       </section>
 
       {/* TESTIMONIAL */}
-      <section className="section section--alt testimonial">
+      {/* <section className="section section--alt testimonial">
         <div className="container testimonial__inner">
           <div className="testimonial__photo">
             <img src={testimony} />
@@ -367,7 +363,7 @@ export default function Home() {
             <img src={testimonialSvg} alt="Client testimonial with a five star rating" />
           </div>
         </div>
-      </section>
+      </section> */}
 
       <div className="container">
         <CtaBand />
