@@ -171,7 +171,7 @@ export default function About() {
           <div className="expertise__ring">
             {/* <TeamRing photos={live} label="NETFUSION" /> */}
             <img src={live} alt="" />
-            <p className="expertise__ring-caption">Implementation &amp; customer success team</p>
+            {/* <p className="expertise__ring-caption">Implementation &amp; customer success team</p> */}
           </div>
         </div>
       </section>
