@@ -7,11 +7,11 @@ import missionSvg from '../assets/svg/mission-vision-compass.svg';
 import teamPhoto from '../assets/image/netfusion-industries.jpg';
 import backupImg from '../assets/image/backup.png';
 import customer from "../assets/image/netfusion-customer-success.jpg"
-import board from "../assets/image/board-paper.png";
-import build from"../assets/image/building.png"
-import Excellence from "../assets/image/Excellence.png"
-import circle2 from "../assets/image/circle2-img.png"
-import circle3 from "../assets/image/circle-img.png"
+import board from "../assets/image/board-paper.jpg";
+import build from"../assets/image/building.jpg"
+import Excellence from "../assets/image/Excellence.jpg"
+import circle2 from "../assets/image/circle2-img.jpg"
+import circle3 from "../assets/image/circle-img.jpg"
 import circle4 from "../assets/image/netfusion-products.jpg"
 import live from "../assets/svg/hero-network.svg"
 import './About.scss';
@@ -105,7 +105,7 @@ export default function About() {
       <section className="section section--alt mission" id="mission">
         <div className="container mission__inner">
           <div className="svg-wrap mission__art">
-            <img src={missionSvg} alt="Compass guiding a rising growth path, representing NETFUSION's mission and vision" />
+            <img src={missionSvg} alt="Compass guiding a rising growth path, representing NETFUSION's mission and vision" loading="lazy" />
           </div>
           <div className="mission__copy">
             <div className="mission__block">
@@ -170,7 +170,7 @@ export default function About() {
           </div>
           <div className="expertise__ring">
             {/* <TeamRing photos={live} label="NETFUSION" /> */}
-            <img src={live} alt="" />
+            <img src={live} alt="" loading="lazy" />
             {/* <p className="expertise__ring-caption">Implementation &amp; customer success team</p> */}
           </div>
         </div>

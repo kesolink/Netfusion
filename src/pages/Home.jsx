@@ -12,10 +12,10 @@ import partnership from '../assets/image/netfusion-partnership.jpg';
 import promoVideo from '../assets/Video/Promo-video.mp4';
 import modern from "../assets/image/Modern.avif"
 import hand from "../assets/image/Shaking-Hands.avif"
-import testimony from "../assets/image/testimony.png"
+import testimony from "../assets/image/testimony.jpg"
 import zenp from "../assets/image/zenp.jpeg"
-import avatar from "../assets/image/avatarimg.png"
-import avatar2 from "../assets/image/avatar2.png"
+import avatar from "../assets/image/avatarimg.jpg"
+import avatar2 from "../assets/image/avatar2.jpg"
 import nirsal from "../assets/image/nirsal.jpeg"
 import './Home.scss';
 

@@ -3,9 +3,9 @@ import CtaBand from '../components/CtaBand';
 import AlternatingRow from '../components/AlternatingRow';
 import ecosystemSvg from '../assets/svg/core-banking-ecosystem.svg';
 import integrationsSvg from '../assets/svg/integrations-network.svg';
-import groupimg from "../assets/image/building.png"
+import groupimg from "../assets/image/building.jpg"
 import hand from "../assets/image/Shaking-Hands.avif"
-import groupmain from "../assets/image/group-main.png"
+import groupmain from "../assets/image/group-main.jpg"
 import { Link } from 'react-router-dom';
 import { PopupButton } from 'react-calendly';
 import './Products.scss';
@@ -174,7 +174,7 @@ export default function Products() {
             </p>
           </div>
           <div className="svg-wrap ecosystem__art">
-            <img src={ecosystemSvg} alt="ALL-FINANCIAL Core Banking Suite connected to digital banking, loan management, CRM, AML compliance, API integration, reporting and Islamic banking modules" />
+            <img src={ecosystemSvg} alt="ALL-FINANCIAL Core Banking Suite connected to digital banking, loan management, CRM, AML compliance, API integration, reporting and Islamic banking modules" loading="lazy" />
           </div>
         </div>
       </section>
@@ -202,7 +202,7 @@ export default function Products() {
             <p className="lead">NIP, NPS, Interswitch, Verve, SMS and email gateways, open APIs and third-party applications &mdash; all supported out of the box.</p>
           </div>
           <div className="svg-wrap integrations__art">
-            <img src={integrationsSvg} alt="NETFUSION platform connected to NIP, NPS, Interswitch, Verve, SMS gateway, email gateway, open APIs and third-party applications" />
+            <img src={integrationsSvg} alt="NETFUSION platform connected to NIP, NPS, Interswitch, Verve, SMS gateway, email gateway, open APIs and third-party applications" loading="lazy" />
           </div>
         </div>
       </section>

@@ -5,8 +5,8 @@ import { toast } from 'react-toastify';
 import SEOHead, { breadcrumbSchema } from '../components/SEOHead';
 import contactSvg from '../assets/svg/contact-pin.svg';
 import securitySvg from '../assets/svg/security-compliance.svg';
-import customerSuccessImg from '../assets/image/service.png';
-import supportimg from '../assets/image/support.png';
+import customerSuccessImg from '../assets/image/service.jpg';
+import supportimg from '../assets/image/support.jpg';
 import './Support.scss';
 
 const channels = [
@@ -75,7 +75,7 @@ export default function Support() {
       <section className="section section--alt customer-success">
         <div className="container customer-success__inner">
           <div className="customer-success__image-wrap">
-            <img src={customerSuccessImg} alt="NETFUSION Customer Success Team Member" />
+            <img src={customerSuccessImg} alt="NETFUSION Customer Success Team Member" loading="lazy" />
           </div>
           <div className="customer-success__content">
             <span className="eyebrow">MORE THAN A HELPDESK</span>
@@ -121,7 +121,7 @@ export default function Support() {
             ))}
           </div>
           <div className="svg-wrap contact-channels__art">
-            <img src={contactSvg} alt="Contact NETFUSION via phone, email or WhatsApp, with office location pin" />
+            <img src={contactSvg} alt="Contact NETFUSION via phone, email or WhatsApp, with office location pin" loading="lazy" />
           </div>
         </div>
       </section>
@@ -129,7 +129,7 @@ export default function Support() {
       <section className="section section--alt contact-form">
         <div className="container contact-form__inner">
           <div className="contact-form__photo">
-            <img src={supportimg} alt="NETFUSION support specialist assisting a client" />
+            <img src={supportimg} alt="NETFUSION support specialist assisting a client" loading="lazy" />
             <div className="contact-form__badge">
               <strong>24/7</strong>
               <span>Technical support</span>

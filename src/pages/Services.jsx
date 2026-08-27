@@ -84,6 +84,7 @@ export default function Services() {
                 src={heroExecsImg}
                 alt="Banking specialists working side by side with client teams"
                 className="services-promo__img"
+                loading="lazy"
               />
               <div className="services-promo__overlay" />
               <div className="services-promo__content">
@@ -120,7 +121,7 @@ export default function Services() {
             <h2>A proven path from kickoff to go-live</h2>
           </div>
           <div className="svg-wrap process__art">
-            <img src={timelineSvg} alt="Implementation roadmap: discovery and planning, configuration, data migration and testing, then go-live, across eight to twelve weeks" />
+            <img src={timelineSvg} alt="Implementation roadmap: discovery and planning, configuration, data migration and testing, then go-live, across eight to twelve weeks" loading="lazy" />
           </div>
         </div>
       </section>
@@ -128,7 +129,7 @@ export default function Services() {
       <section className="section tco">
         <div className="container tco__inner">
           <div className="svg-wrap tco__art">
-            <img src={tcoSvg} alt="Lower total cost of ownership: cost decreasing over time while platform value increases" />
+            <img src={tcoSvg} alt="Lower total cost of ownership: cost decreasing over time while platform value increases" loading="lazy" />
           </div>
           <div className="tco__copy">
             <span className="eyebrow">Lower total cost of ownership</span>
@@ -160,7 +161,7 @@ export default function Services() {
             </div>
           </div>
           <div className="svg-wrap faq__art">
-            <img src={faqSvg} alt="Frequently asked questions represented as a question and answer chat exchange" />
+            <img src={faqSvg} alt="Frequently asked questions represented as a question and answer chat exchange" loading="lazy" />
           </div>
         </div>
       </section>
