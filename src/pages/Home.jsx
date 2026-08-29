@@ -18,6 +18,7 @@ import avatar from "../assets/image/avatarimg.jpg"
 import avatar2 from "../assets/image/avatar2.jpg"
 import nirsal from "../assets/image/nirsal.jpeg"
 import './Home.scss';
+import CoreModules from '../components/CoreModules';
 
 const stats = [
   { value: '20+', label: 'Years combined banking & fintech expertise' },
@@ -187,92 +188,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* TRUST BAR */}
-      <section className="trust-bar">
-        <div className="container">
-          <div className="trust-bar__top">
-            <div className="trust-bar__heading">
-              <span className="eyebrow">&mdash; TRUSTED TECHNOLOGY PARTNER</span>
-              <h2>Trusted by financial institutions <br /><span className="trust-bar__highlight">that move Africa forward.</span></h2>
-            </div>
-            <div className="trust-bar__desc">
-              <p>We partner with ambitious institutions to create banking experiences that are simple, secure and ready for what's next.</p>
-            </div>
-          </div>
-          <div className="trust-bar__logos-wrap">
-            <div className="trust-bar__marquee">
-              <div className="trust-bar__logos">
-                <div className="trust-logo-item">
-                  <img src="/logos/molusi.jpg" alt="Molusi MFB" className="trust-logo-img" />
-                  <span className="trust-logo-text">Molusi MFB</span>
-                </div>
-                <div className="trust-logo-item">
-                  <img src="/logos/hmfb.jpg" alt="HMFB" className="trust-logo-img" />
-                  <span className="trust-logo-text">Honey MFB</span>
-                </div>
-                <div className="trust-logo-item">
-                  <img src={zenp} alt="ZENP FC" className="trust-logo-img" />
-                  <span className="trust-logo-text">ZENP FC</span>
-                </div>
-              </div>
-              <div className="trust-bar__logos" aria-hidden="true">
-                <div className="trust-logo-item">
-                  <img src="/logos/molusi.jpg" alt="Molusi MFB" className="trust-logo-img" />
-                  <span className="trust-logo-text">Molusi MFB</span>
-                </div>
-                <div className="trust-logo-item">
-                  <img src="/logos/hmfb.jpg" alt="HMFB" className="trust-logo-img" />
-                  <span className="trust-logo-text">Honey MFB</span>
-                </div>
-                <div className="trust-logo-item">
-                  <img src={zenp} alt="ZENP FC" className="trust-logo-img" />
-                  <span className="trust-logo-text">ZENP FC</span>
-                </div>
-                <div className="trust-logo-item">
-                  <img src={nirsal} alt="ZEN" className="trust-logo-img" />
-                  <span className="trust-logo-text">NIRSAL</span>
-                </div>
-              </div>
-              <div className="trust-bar__logos" aria-hidden="true">
-                <div className="trust-logo-item">
-                  <img src="/logos/molusi.jpg" alt="Molusi MFB" className="trust-logo-img" />
-                  <span className="trust-logo-text">Molusi MFB</span>
-                </div>
-                <div className="trust-logo-item">
-                  <img src="/logos/hmfb.jpg" alt="HMFB" className="trust-logo-img" />
-                  <span className="trust-logo-text">Honey MFB</span>
-                </div>
-                <div className="trust-logo-item">
-                  <img src={zenp} alt="ZENP FC" className="trust-logo-img" />
-                  <span className="trust-logo-text">ZENP FC</span>
-                </div>
-                <div className="trust-logo-item">
-                  <img src={nirsal} alt="ZEN" className="trust-logo-img" />
-                  <span className="trust-logo-text">NIRSAL</span>
-                </div>
-              </div>
-              <div className="trust-bar__logos" aria-hidden="true">
-                <div className="trust-logo-item">
-                  <img src="/logos/molusi.jpg" alt="Molusi MFB" className="trust-logo-img" />
-                  <span className="trust-logo-text">Molusi MFB</span>
-                </div>
-                <div className="trust-logo-item">
-                  <img src="/logos/hmfb.jpg" alt="HMFB" className="trust-logo-img" />
-                  <span className="trust-logo-text">Honey MFB</span>
-                </div>
-                <div className="trust-logo-item">
-                  <img src={zenp} alt="ZENP FC" className="trust-logo-img" />
-                  <span className="trust-logo-text">ZENP FC</span>
-                </div>
-                <div className="trust-logo-item">
-                  <img src={nirsal} alt="ZEN" className="trust-logo-img" />
-                  <span className="trust-logo-text">NIRSAL</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* CORE MODULES */}
+      <CoreModules />
+
+      
 
       {/* PROMO VIDEO */}
       <section className="section home-video">
@@ -364,6 +283,94 @@ export default function Home() {
           </div>
         </div>
       </section> */}
+
+
+      {/* TRUST BAR */}
+      <section className="trust-bar">
+        <div className="container">
+          <div className="trust-bar__top">
+            <div className="trust-bar__heading">
+              <span className="eyebrow">&mdash; TRUSTED TECHNOLOGY PARTNER</span>
+              <h2>Trusted by financial institutions <br /><span className="trust-bar__highlight">that move Africa forward.</span></h2>
+            </div>
+            <div className="trust-bar__desc">
+              <p>We partner with ambitious institutions to create banking experiences that are simple, secure and ready for what's next.</p>
+            </div>
+          </div>
+          <div className="trust-bar__logos-wrap">
+            <div className="trust-bar__marquee">
+              <div className="trust-bar__logos">
+                <div className="trust-logo-item">
+                  <img src="/logos/molusi.jpg" alt="Molusi MFB" className="trust-logo-img" />
+                  <span className="trust-logo-text">Molusi MFB</span>
+                </div>
+                <div className="trust-logo-item">
+                  <img src="/logos/hmfb.jpg" alt="HMFB" className="trust-logo-img" />
+                  <span className="trust-logo-text">Honey MFB</span>
+                </div>
+                <div className="trust-logo-item">
+                  <img src={zenp} alt="ZENP FC" className="trust-logo-img" />
+                  <span className="trust-logo-text">ZENP FC</span>
+                </div>
+              </div>
+              <div className="trust-bar__logos" aria-hidden="true">
+                <div className="trust-logo-item">
+                  <img src="/logos/molusi.jpg" alt="Molusi MFB" className="trust-logo-img" />
+                  <span className="trust-logo-text">Molusi MFB</span>
+                </div>
+                <div className="trust-logo-item">
+                  <img src="/logos/hmfb.jpg" alt="HMFB" className="trust-logo-img" />
+                  <span className="trust-logo-text">Honey MFB</span>
+                </div>
+                <div className="trust-logo-item">
+                  <img src={zenp} alt="ZENP FC" className="trust-logo-img" />
+                  <span className="trust-logo-text">ZENP FC</span>
+                </div>
+                <div className="trust-logo-item">
+                  <img src={nirsal} alt="ZEN" className="trust-logo-img" />
+                  <span className="trust-logo-text">NIRSAL</span>
+                </div>
+              </div>
+              <div className="trust-bar__logos" aria-hidden="true">
+                <div className="trust-logo-item">
+                  <img src="/logos/molusi.jpg" alt="Molusi MFB" className="trust-logo-img" />
+                  <span className="trust-logo-text">Molusi MFB</span>
+                </div>
+                <div className="trust-logo-item">
+                  <img src="/logos/hmfb.jpg" alt="HMFB" className="trust-logo-img" />
+                  <span className="trust-logo-text">Honey MFB</span>
+                </div>
+                <div className="trust-logo-item">
+                  <img src={zenp} alt="ZENP FC" className="trust-logo-img" />
+                  <span className="trust-logo-text">ZENP FC</span>
+                </div>
+                <div className="trust-logo-item">
+                  <img src={nirsal} alt="ZEN" className="trust-logo-img" />
+                  <span className="trust-logo-text">NIRSAL</span>
+                </div>
+              </div>
+              <div className="trust-bar__logos" aria-hidden="true">
+                <div className="trust-logo-item">
+                  <img src="/logos/molusi.jpg" alt="Molusi MFB" className="trust-logo-img" />
+                  <span className="trust-logo-text">Molusi MFB</span>
+                </div>
+                <div className="trust-logo-item">
+                  <img src="/logos/hmfb.jpg" alt="HMFB" className="trust-logo-img" />
+                  <span className="trust-logo-text">Honey MFB</span>
+                </div>
+                <div className="trust-logo-item">
+                  <img src={zenp} alt="ZENP FC" className="trust-logo-img" />
+                  <span className="trust-logo-text">ZENP FC</span>
+                </div>
+                <div className="trust-logo-item">
+                  <img src={nirsal} alt="ZEN" className="trust-logo-img" />
+                  <span className="trust-logo-text">NIRSAL</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <div className="container">
         <CtaBand />

@@ -29,7 +29,7 @@ export default function AlternatingRow({
           )}
         </div>
         <div className="alt-row__text">
-          {eyebrow && <span className="eyebrow">{eyebrow}</span>}
+          {/* {eyebrow && <span className="eyebrow">{eyebrow}</span>} */}
           <h3>{title}</h3>
           <p>{description}</p>
         </div>

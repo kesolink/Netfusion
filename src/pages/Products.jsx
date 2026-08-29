@@ -182,7 +182,7 @@ export default function Products() {
       <section className="section modules">
         <div className="container">
           <div className="section-head center modules__head">
-            <h2>One integrated core. <span className="highlight-cyan">20 modules.</span></h2>
+            <h2>One integrated core. <span className="highlight-cyan">20+ modules.</span></h2>
           </div>
           <div className="modules__grid">
             {modules.map((name) => (

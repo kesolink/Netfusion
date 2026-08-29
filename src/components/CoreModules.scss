@@ -1,0 +1,236 @@
+// ---------------------------------------------------------------
+// CoreBankingSection — brand tokens
+// Swap these to match your existing SCSS variables/theme if you
+// already have $color-navy / $color-teal etc. defined globally.
+// ---------------------------------------------------------------
+$navy: #0b2340;
+$teal: #12796c;
+$teal-light: #1a8f7f;
+$bg-light: #f3f8f9;
+$bg-band: #eef3f5;
+$text-gray: #5a6b78;
+$border-soft: rgba(11, 35, 64, 0.08);
+
+.cb-section {
+  background: $bg-light;
+  padding: 88px 24px 0;
+  color: $navy;
+}
+
+.cb-container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+// ---- Header -------------------------------------------------
+.cb-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 24px;
+}
+
+.cb-eyebrow {
+  margin: 0 0 12px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: $teal;
+  text-transform: uppercase;
+}
+
+.cb-title {
+  margin: 0 0 18px;
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 800;
+  line-height: 1.1;
+
+  .cb-title-line {
+    display: block;
+  }
+
+  .cb-title-navy {
+    color: $navy;
+  }
+
+  .cb-title-teal {
+    color: $teal;
+  }
+}
+
+.cb-intro {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.6;
+  color: $text-gray;
+}
+
+// ---- Diagram --------------------------------------------------
+.cb-diagram {
+  width: 100%;
+  overflow-x: auto;
+  display: flex;
+  justify-content: center;
+  padding: 8px 0 24px;
+
+  svg {
+    width: 100%;
+    max-width: 760px;
+    min-width: 560px;
+    height: auto;
+  }
+}
+
+// ---- Integrations band -----------------------------------------
+.cb-integrations {
+  background: #ffffff;
+  border: 1px solid $border-soft;
+  border-radius: 20px;
+  padding: 32px 36px;
+  margin: 8px 0 64px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 28px 40px;
+  box-shadow: 0 12px 30px rgba(11, 35, 64, 0.06);
+}
+
+.cb-integrations-copy {
+  flex: 0 0 auto;
+  max-width: 220px;
+
+  h3 {
+    margin: 0 0 6px;
+    font-size: 18px;
+    font-weight: 800;
+    color: $teal;
+  }
+
+  p {
+    margin: 0;
+    font-size: 13.5px;
+    color: $text-gray;
+    line-height: 1.5;
+  }
+}
+
+.cb-integrations-list {
+  flex: 1 1 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cb-integration-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: 72px;
+}
+
+.cb-integration-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, $navy, $teal-light);
+  box-shadow: 0 6px 16px rgba(11, 35, 64, 0.18);
+}
+
+.cb-integration-label {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: $navy;
+  text-align: center;
+}
+
+// ---- Bottom features strip --------------------------------------
+.cb-features {
+  background: $navy;
+  padding: 44px 24px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+.cb-features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.cb-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  
+
+  h4 {
+    margin: 0 0 4px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  p {
+    margin: 0;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.68);
+  }
+}
+
+.cb-feature-icon {
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(18, 121, 108, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// ---- Responsive ---------------------------------------------------
+@media (max-width: 860px) {
+  .cb-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cb-features{
+    border-radius: 32px;
+     padding: 33px 24px;
+}
+
+  
+}
+
+@media (max-width: 560px) {
+  .cb-section {
+    padding: 64px 16px 0;
+  }
+
+  .cb-integrations {
+    padding: 24px 20px;
+    border-radius: 16px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .cb-integrations-copy {
+    max-width: 100%;
+  }
+
+  .cb-integrations-list {
+    justify-content: center;
+  }
+
+  .cb-features-grid {
+    grid-template-columns: 1fr;
+  }
+}
