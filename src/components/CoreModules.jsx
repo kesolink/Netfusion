@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import diagramSvg from "../assets/svg/netfusion-modules-diagram1.svg?raw";
 import "./CoreModules.scss";
 
@@ -162,6 +163,15 @@ function FeatureIcon({ type }) {
 }
 
 export default function CoreModules() {
+  const diagramRef = useRef(null);
+
+  useEffect(() => {
+    const el = diagramRef.current;
+    if (el) {
+      el.scrollLeft = (el.scrollWidth - el.clientWidth) / 2;
+    }
+  }, []);
+
   return (
     <section className="cb-section" aria-labelledby="cb-heading">
       <div className="cb-container">
@@ -178,6 +188,7 @@ export default function CoreModules() {
         </header>
 
         <div
+          ref={diagramRef}
           className="cb-diagram"
           role="img"
           aria-label="Diagram of the twelve All-Financial Core Banking modules connected to a central hub: KYC/CRM, Credit Management, Integration, Thrift and Collection, Investments, Teller, Products, Accounts and Transfers, Audit and Reports, Messaging, Fixed Assets, and Securities."
