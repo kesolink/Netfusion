@@ -23,7 +23,7 @@ import CoreModules from '../components/CoreModules';
 const stats = [
   { value: '20+', label: 'Years combined banking & fintech expertise' },
   { value: '99.9%', label: 'Core banking uptime' },
-  { value: '1000+', label: 'Transactions processed per second' },
+  { value: '100k+', label: 'Transactions processed per second' },
   { value: '24/7', label: 'Technical support' },
   { value: '100%', label: 'Scalable & secure architecture' },
 ];
@@ -37,6 +37,11 @@ const products = [
   { name: 'AML & Compliance Solution', desc: 'Real-time monitoring built for African regulatory realities.' },
   { name: 'API Integration Platform', desc: 'Open banking APIs that connect to your wider ecosystem.' },
   { name: 'Reporting & Analytics Dashboard', desc: 'Decision-ready insight across every branch and product.' },
+];
+
+const africanCountries = [
+  "Nigeria", "Rwanda", "Ghana", "Kenya", "Uganda", 
+  "Tanzania", "Zambia", "Côte d'Ivoire", "Senegal", "Cameroon"
 ];
 
 const whyUs = [
@@ -268,6 +273,53 @@ export default function Home() {
           </div>
           <div className="svg-wrap industries__art">
             <img src={industriesSvg} alt="Industries served: savings & loans, microfinance banks, mortgage banks, fintechs, cooperative societies and SACCOS" />
+          </div>
+        </div>
+      </section>
+
+      {/* WHERE WE ARE GOING */}
+      <section className="section where-we-are-going">
+        <div className="container">
+          <div className="where-we-are-going__inner">
+            <div className="where-we-are-going__heading">
+              <span className="eyebrow">Where We Are Going</span>
+              <h2>FROM NIGERIA TO AFRICA</h2>
+            </div>
+            <div className="where-we-are-going__copy">
+              <p className="lead">
+                NETFUSION began with a deep understanding of Nigeria's financial services ecosystem. Today, our ambition is broader: to provide modern financial technology infrastructure for institutions across Africa.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AFRICA MARKET */}
+      <section className="africa-market">
+        <div className="container">
+          <div className="africa-market__content">
+            <h2>BUILT FOR AFRICA.<br /><span className="text-teal">READY TO SCALE.</span></h2>
+            <p>
+              From microfinance institutions and SACCOS to commercial banks and emerging fintechs, NETFUSION provides technology infrastructure designed around the operational realities of African financial institutions.
+            </p>
+          </div>
+        </div>
+        
+        <div className="africa-market__ticker-wrap">
+          <div className="africa-market__ticker">
+            {[...africanCountries, ...africanCountries].map((country, index) => (
+              <div className="ticker-group" key={index}>
+                <span className="ticker-item">{country}</span>
+                <span className="ticker-separator"></span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="container">
+          <div className="africa-market__footer">
+            <span className="eyebrow">AFRICA IS OUR MARKET.</span>
+            <p>Designed for deployment across diverse African financial ecosystems.</p>
           </div>
         </div>
       </section>

@@ -9,6 +9,13 @@ const integrations = [
   { key: "sms", label: "SMS Gateway" },
   { key: "email", label: "Email Gateway" },
   { key: "api", label: "API" },
+  { key: "ghipss", label: "GhIPSS (Ghana)" },
+  { key: "kepss", label: "KEPSS (Kenya)" },
+  { key: "eaps", label: "EAPS & REPSS (Kenya)" },
+  { key: "rtgs", label: "RTGS" },
+  { key: "papss", label: "PAPSS" },
+  { key: "mmi", label: "Mobile Money Interoperability" },
+  { key: "more", label: "More..." },
 ];
 
 const features = [
@@ -109,6 +116,61 @@ function IntegrationIcon({ type }) {
           })}
         </svg>
       );
+    case "ghipss":
+      return (
+        <svg viewBox="0 0 28 28" width="26" height="26">
+          <circle cx="14" cy="14" r="8" {...common} />
+          <path d="M14 6 c-4 0-4 16 0 16" {...common} />
+          <path d="M14 6 c4 0 4 16 0 16" {...common} />
+          <line x1="6" y1="14" x2="22" y2="14" {...common} />
+        </svg>
+      );
+    case "kepss":
+      return (
+        <svg viewBox="0 0 28 28" width="26" height="26">
+          <path d="M14 4 L22 8 V16 C22 20 14 24 14 24 C14 24 6 20 6 16 V8 Z" {...common} />
+          <path d="M14 10 L14 18 M10 14 L18 14" {...common} />
+        </svg>
+      );
+    case "eaps":
+      return (
+        <svg viewBox="0 0 28 28" width="26" height="26">
+          <circle cx="14" cy="14" r="3" {...common} />
+          <circle cx="8" cy="8" r="3" {...common} />
+          <circle cx="20" cy="20" r="3" {...common} />
+          <line x1="10" y1="10" x2="12" y2="12" {...common} />
+          <line x1="16" y1="16" x2="18" y2="18" {...common} />
+        </svg>
+      );
+    case "rtgs":
+      return (
+        <svg viewBox="0 0 28 28" width="26" height="26">
+          <path d="M8 8 L16 14 L8 20" {...common} />
+          <path d="M14 8 L22 14 L14 20" {...common} />
+        </svg>
+      );
+    case "papss":
+      return (
+        <svg viewBox="0 0 28 28" width="26" height="26">
+          <path d="M14 4 L17 10 L24 11 L19 16 L20 23 L14 20 L8 23 L9 16 L4 11 L11 10 Z" {...common} />
+        </svg>
+      );
+    case "mmi":
+      return (
+        <svg viewBox="0 0 28 28" width="26" height="26">
+          <rect x="8" y="4" width="12" height="20" rx="2" {...common} />
+          <line x1="11" y1="14" x2="17" y2="14" {...common} />
+          <line x1="14" y1="11" x2="14" y2="17" {...common} />
+        </svg>
+      );
+    case "more":
+      return (
+        <svg viewBox="0 0 28 28" width="26" height="26">
+          <circle cx="7" cy="14" r="1.5" fill="#FFFFFF" stroke="none" />
+          <circle cx="14" cy="14" r="1.5" fill="#FFFFFF" stroke="none" />
+          <circle cx="21" cy="14" r="1.5" fill="#FFFFFF" stroke="none" />
+        </svg>
+      );
     default:
       return null;
   }
@@ -200,16 +262,30 @@ export default function CoreModules() {
             <h3>Powerful Integrations</h3>
             <p>Seamlessly connect with leading networks and services.</p>
           </div>
-          <ul className="cb-integrations-list">
-            {integrations.map((item) => (
-              <li key={item.key} className="cb-integration-item">
-                <span className="cb-integration-icon">
-                  <IntegrationIcon type={item.key} />
-                </span>
-                <span className="cb-integration-label">{item.label}</span>
-              </li>
-            ))}
-          </ul>
+          <div className="cb-integrations-marquee-wrapper">
+            <div className="cb-integrations-marquee">
+              <ul className="cb-integrations-list">
+                {integrations.map((item) => (
+                  <li key={item.key} className="cb-integration-item">
+                    <span className="cb-integration-icon">
+                      <IntegrationIcon type={item.key} />
+                    </span>
+                    <span className="cb-integration-label">{item.label}</span>
+                  </li>
+                ))}
+              </ul>
+              <ul className="cb-integrations-list" aria-hidden="true">
+                {integrations.map((item) => (
+                  <li key={`${item.key}-dup`} className="cb-integration-item">
+                    <span className="cb-integration-icon">
+                      <IntegrationIcon type={item.key} />
+                    </span>
+                    <span className="cb-integration-label">{item.label}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
 

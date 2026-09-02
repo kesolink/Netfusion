@@ -88,15 +88,18 @@ $border-soft: rgba(11, 35, 64, 0.08);
   padding: 32px 36px;
   margin: 8px 0 64px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   gap: 28px 40px;
   box-shadow: 0 12px 30px rgba(11, 35, 64, 0.06);
+  overflow: hidden;
 }
 
 .cb-integrations-copy {
   flex: 0 0 auto;
   max-width: 220px;
+  position: relative;
+  z-index: 2;
 
   h3 {
     margin: 0 0 6px;
@@ -113,14 +116,54 @@ $border-soft: rgba(11, 35, 64, 0.08);
   }
 }
 
-.cb-integrations-list {
+.cb-integrations-marquee-wrapper {
   flex: 1 1 auto;
+  overflow: hidden;
+  position: relative;
+  
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 60px;
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  &::before {
+    left: 0;
+    background: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0));
+  }
+  
+  &::after {
+    right: 0;
+    background: linear-gradient(to left, #ffffff, rgba(255, 255, 255, 0));
+  }
+}
+
+.cb-integrations-marquee {
   display: flex;
-  flex-wrap: wrap;
-  gap: 28px;
+  width: max-content;
+  animation: scrollLeft 40s linear infinite;
+  
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes scrollLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.cb-integrations-list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 40px;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 20px;
 }
 
 .cb-integration-item {
@@ -226,8 +269,8 @@ $border-soft: rgba(11, 35, 64, 0.08);
     max-width: 100%;
   }
 
-  .cb-integrations-list {
-    justify-content: center;
+  .cb-integrations-marquee-wrapper {
+    width: 100%;
   }
 
   .cb-features-grid {

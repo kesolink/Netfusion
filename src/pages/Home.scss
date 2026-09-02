@@ -599,6 +599,178 @@
   margin-inline: auto;
 }
 
+// ---- WHERE WE ARE GOING ----
+.where-we-are-going {
+  background: #f3f8f9;
+  padding-block: 80px 40px;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+    align-items: center;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+
+  &__heading {
+    .eyebrow {
+      color: $teal;
+      margin-bottom: 16px;
+      display: inline-block;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 800;
+      color: $navy;
+      margin: 0;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+  }
+
+  &__copy {
+    p.lead {
+      margin: 0;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: $text-muted;
+
+      @include tablet {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+// ---- AFRICA MARKET ----
+.africa-market {
+  background: radial-gradient(circle at top right, rgba(18, 121, 108, 0.15) 0%, transparent 60%), #082c5c;
+  color: $white;
+  padding-block: 100px;
+  position: relative;
+  overflow: hidden;
+
+  &__content {
+    max-width: 800px;
+    margin-inline: auto;
+    text-align: center;
+    margin-bottom: 64px;
+
+    h2 {
+      font-size: clamp(2.5rem, 4vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 24px;
+      letter-spacing: -0.02em;
+    }
+
+    .text-teal {
+      color: $teal;
+    }
+
+    p {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.85);
+    }
+  }
+
+  &__ticker-wrap {
+    width: 100%;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.03);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-block: 24px;
+    margin-bottom: 64px;
+    position: relative;
+
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100px;
+      z-index: 2;
+      pointer-events: none;
+    }
+    
+    &::before {
+      left: 0;
+      background: linear-gradient(to right, #082c5c, transparent);
+    }
+    
+    &::after {
+      right: 0;
+      background: linear-gradient(to left, #082c5c, transparent);
+    }
+  }
+
+  &__ticker {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    animation: scrollTicker 30s linear infinite;
+  }
+
+  .ticker-group {
+    display: flex;
+    align-items: center;
+  }
+
+  .ticker-item {
+    font-family: $font-heading;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.9);
+    white-space: nowrap;
+    padding-inline: 40px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .ticker-separator {
+    width: 6px;
+    height: 6px;
+    background: $teal;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  &__footer {
+    text-align: center;
+    
+    .eyebrow {
+      color: $teal;
+      display: inline-block;
+      margin-bottom: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      font-size: 0.85rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.7);
+      margin: 0;
+    }
+  }
+}
+
+@keyframes scrollTicker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 // ---- TESTIMONIAL ----
 .testimonial {
   &__inner {

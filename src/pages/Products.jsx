@@ -17,7 +17,7 @@ const benefits = [
     image: groupmain,
     alt: 'Operations team monitoring real-time transaction volumes',
     shape: 'rounded',
-    badge: { icon: '\u26A1', text: '1000+ TPS' },
+    badge: { icon: '\u26A1', text: '100k+ TPS' },
   },
   {
     title: 'Bank-Grade Security & Compliance',
