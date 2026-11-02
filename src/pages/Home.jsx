@@ -115,6 +115,25 @@ const whyUs = [
   },
 ];
 
+// Inline SVG icon helper for AF features section
+const AfIcon = ({ name }) => {
+  const p = { xmlns: 'http://www.w3.org/2000/svg', width: 22, height: 22, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', strokeWidth: 1.8, strokeLinecap: 'round', strokeLinejoin: 'round' };
+  switch (name) {
+    case 'shield':       return <svg {...p}><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>;
+    case 'layers':       return <svg {...p}><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>;
+    case 'users':        return <svg {...p}><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>;
+    case 'git-branch':   return <svg {...p}><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>;
+    case 'file-text':    return <svg {...p}><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>;
+    case 'zap':          return <svg {...p}><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>;
+    case 'activity':     return <svg {...p}><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>;
+    case 'database':     return <svg {...p}><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>;
+    case 'lock':         return <svg {...p}><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>;
+    case 'link':         return <svg {...p}><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>;
+    case 'trending-up':  return <svg {...p}><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>;
+    default: return null;
+  }
+};
+
 export default function Home() {
   const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
 
@@ -234,7 +253,83 @@ export default function Home() {
       {/* CORE MODULES */}
       <CoreModules />
 
-      
+      {/* ALL-FINANCIAL KEY FEATURES & FUNCTIONS */}
+      <section className="section af-features">
+        <div className="container">
+          <div className="af-features__header">
+            <div className="af-features__title-col">
+              <h2 className="af-features__title">
+                All-Financial key<br />features &amp; functions
+              </h2>
+            </div>
+            <div className="af-features__intro-col">
+              <p className="af-features__intro">
+                Eight capabilities that run your institution every day, in one secure core platform, and four outcomes your board will notice.
+              </p>
+            </div>
+          </div>
+
+          <div className="af-features__grid">
+            {[
+              { num: '01', icon: 'shield',    label: 'Anti-money laundering' },
+              { num: '02', icon: 'layers',    label: 'Multi tenancy' },
+              { num: '03', icon: 'users',     label: 'Maker checker' },
+              { num: '04', icon: 'git-branch',label: 'Unlimited branches' },
+              { num: '05', icon: 'file-text', label: 'Audit trail functionality' },
+              { num: '06', icon: 'zap',       label: 'Loan automation' },
+              { num: '07', icon: 'activity',  label: 'Past due management system' },
+              { num: '08', icon: 'database',  label: 'Database accessibility' },
+            ].map(({ num, icon, label }) => (
+              <div className="af-features__card" key={num}>
+                <div className="af-features__card-top">
+                  <div className="af-features__icon-wrap">
+                    <AfIcon name={icon} />
+                  </div>
+                  <span className="af-features__num">{num}</span>
+                </div>
+                <span className="af-features__label">{label}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* WHAT IT GIVES YOU */}
+          <div className="af-gives">
+            <div className="af-gives__eyebrow">WHAT IT GIVES YOU</div>
+            <div className="af-gives__grid">
+              {[
+                {
+                  icon: 'lock',
+                  title: 'Secure Operations',
+                  desc: 'Built with strong controls to ensure data security and regulatory compliance.',
+                },
+                {
+                  icon: 'activity',
+                  title: 'Real-time Insights',
+                  desc: 'Get accurate, real-time information for better decision making.',
+                },
+                {
+                  icon: 'link',
+                  title: 'Operational Efficiency',
+                  desc: 'Automate processes and reduce manual workload across the board.',
+                },
+                {
+                  icon: 'trending-up',
+                  title: 'Business Growth',
+                  desc: 'Scalable and flexible platform that grows with your institution.',
+                },
+              ].map(({ icon, title, desc }) => (
+                <div className="af-gives__card" key={title}>
+                  <div className="af-gives__icon-wrap">
+                    <AfIcon name={icon} />
+                  </div>
+                  <h4 className="af-gives__card-title">{title}</h4>
+                  <p className="af-gives__card-desc">{desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* PROMO VIDEO */}
       <section className="section home-video">
